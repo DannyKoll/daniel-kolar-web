@@ -33,8 +33,9 @@ export default function Process() {
       id="proces"
       className="relative py-20 sm:py-28 lg:py-36 overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-950 to-navy-900/95" />
+      <div className="absolute inset-0 bg-gradient-to-b from-navy-950 via-navy-900/95 to-navy-950" />
       <div className="absolute right-0 top-1/4 w-[500px] h-[500px] rounded-full bg-gold-500/[0.04] blur-3xl" />
+      <div className="absolute left-0 bottom-0 w-[420px] h-[420px] rounded-full bg-navy-600/25 blur-3xl" />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20 reveal">
@@ -57,10 +58,9 @@ export default function Process() {
         </div>
 
         <div className="relative">
-          {/* Connecting line for desktop */}
-          <div className="hidden lg:block absolute top-12 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent" />
+          <div className="absolute left-9 right-9 top-7 hidden h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent lg:block" />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
             {steps.map((s, i) => (
               <Step key={s.n} {...s} delay={i * 100} />
             ))}
@@ -73,26 +73,21 @@ export default function Process() {
 
 function Step({ n, icon: Icon, title, desc, delay }) {
   return (
-    <div
-      className="relative reveal text-center lg:text-left"
+    <article
+      className="relative rounded-2xl border border-gold-500/10 bg-navy-950/45 p-5 sm:p-6 reveal"
       style={{ transitionDelay: `${delay}ms` }}
     >
-      {/* Step number circle */}
-      <div className="relative inline-flex items-center justify-center w-24 h-24 mb-5 mx-auto lg:mx-0">
-        <div className="absolute inset-0 rounded-full border border-gold-500/20 bg-navy-900/60" />
-        <div className="absolute inset-2 rounded-full bg-gradient-to-br from-navy-800 to-navy-900 border border-gold-500/30 flex items-center justify-center">
-          <Icon size={26} className="text-gold-400" />
+      <div className="mb-5 flex items-center justify-between gap-4">
+        <div className="relative z-10 inline-flex h-14 w-14 items-center justify-center rounded-full border border-gold-500/25 bg-gradient-to-br from-navy-800 to-navy-950 shadow-[0_18px_36px_-28px_rgba(201,169,97,0.9)]">
+          <Icon size={23} className="text-gold-300" />
         </div>
-        {/* Step number badge */}
-        <div className="absolute -top-1 -right-1 w-9 h-9 rounded-full bg-gradient-to-br from-gold-300 to-gold-700 flex items-center justify-center text-xs font-bold text-navy-950 shadow-glow">
-          {n}
-        </div>
+        <span className="font-display text-3xl text-gold-400/45">{n}</span>
       </div>
 
       <h3 className="font-display text-lg sm:text-xl text-white mb-3">
         {title}
       </h3>
       <p className="text-sm text-slate-300/85 leading-relaxed">{desc}</p>
-    </div>
+    </article>
   );
 }
