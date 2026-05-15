@@ -1,6 +1,12 @@
 import Image from "next/image";
 import { ArrowRight, Sparkles } from "lucide-react";
 
+const trustStats = [
+  { value: "11+", label: "let praxe" },
+  { value: "Nezávisle", label: "bez tlaku na produkt" },
+  { value: "Dlouhodobě", label: "péče i po podpisu" },
+];
+
 export default function Hero() {
   return (
     <section
@@ -53,6 +59,22 @@ export default function Hero() {
               >
                 Prozkoumat služby
               </a>
+            </div>
+
+            <div className="mt-9 grid grid-cols-3 gap-3 max-w-xl mx-auto lg:mx-0 reveal">
+              {trustStats.map((stat) => (
+                <div
+                  key={stat.value}
+                  className="border-t border-gold-500/20 pt-4 text-center lg:text-left"
+                >
+                  <div className="font-display text-lg sm:text-xl text-white leading-none">
+                    {stat.value}
+                  </div>
+                  <div className="mt-1 text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-slate-400 leading-relaxed">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
