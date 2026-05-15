@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-[100svh] flex items-center overflow-hidden pt-24 sm:pt-28 pb-16"
+      className="relative min-h-[88svh] flex items-center overflow-hidden pt-24 sm:pt-28 pb-10 sm:pb-12 lg:pb-14"
     >
       {/* Background layers */}
       <div className="absolute inset-0 bg-navy-950" />
@@ -61,11 +61,11 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="mt-9 grid grid-cols-3 gap-3 max-w-xl mx-auto lg:mx-0 reveal">
+            <div className="mt-7 grid grid-cols-3 gap-3 max-w-xl mx-auto lg:mx-0 reveal">
               {trustStats.map((stat) => (
                 <div
                   key={stat.value}
-                  className="border-t border-gold-500/20 pt-4 text-center lg:text-left"
+                  className="border-t border-gold-500/20 pt-3 text-center lg:text-left"
                 >
                   <div className="font-display text-lg sm:text-xl text-white leading-none">
                     {stat.value}
