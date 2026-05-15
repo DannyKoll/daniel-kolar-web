@@ -12,9 +12,10 @@ export default function About() {
   return (
     <section
       id="o-mne"
-      className="relative pt-14 pb-20 sm:pt-18 sm:pb-28 lg:pt-20 lg:pb-36 overflow-hidden"
+      className="relative pt-14 pb-20 sm:pt-20 sm:pb-28 lg:pt-24 lg:pb-36 overflow-hidden"
     >
       <div className="absolute inset-0 bg-navy-950" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,23,43,1)_0%,rgba(10,29,52,0.95)_48%,rgba(7,23,43,1)_100%)]" />
       <div className="absolute top-1/2 right-0 w-[400px] h-[400px] rounded-full bg-gold-500/[0.04] blur-3xl -translate-y-1/2" />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
