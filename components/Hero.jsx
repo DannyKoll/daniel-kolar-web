@@ -63,11 +63,11 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="mt-7 grid grid-cols-3 gap-2 sm:gap-3 max-w-xl mx-auto lg:mx-0 reveal">
+            <div className="mt-7 grid grid-cols-3 gap-3 max-w-xl mx-auto lg:mx-0 reveal">
               {trustStats.map((stat) => (
                 <div
                   key={stat.value}
-                  className="rounded-xl border border-white/10 bg-white/[0.035] px-3 py-3 text-center lg:text-left backdrop-blur-sm"
+                  className="border-t border-gold-500/20 pt-3 text-center lg:text-left"
                 >
                   <div className="font-display text-lg sm:text-xl text-white leading-none">
                     {stat.value}
