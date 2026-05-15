@@ -51,27 +51,26 @@ export default function Services() {
   return (
     <section
       id="sluzby"
-      className="relative py-20 sm:py-28 lg:py-36 overflow-hidden"
+      className="relative pt-12 pb-20 sm:pt-16 sm:pb-28 lg:pt-20 lg:pb-36 overflow-hidden"
     >
       <div className="absolute inset-0 bg-navy-950" />
-      <div className="absolute top-0 left-0 w-full h-px divider-line opacity-30" />
+      <div className="absolute top-0 left-0 w-full h-px divider-line opacity-15" />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
         {/* Section header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20 reveal">
-          <div className="inline-flex items-center gap-2 mb-5">
-            <span className="h-px w-10 bg-gold-500" />
+        <div className="max-w-3xl mb-10 sm:mb-14 reveal">
+          <div className="inline-flex items-center gap-3 mb-4">
+            <span className="h-px w-10 bg-gold-500/70" />
             <span className="text-xs sm:text-sm tracking-[0.25em] uppercase text-gold-400">
-              Co pro vás dělám
+              Služby
             </span>
-            <span className="h-px w-10 bg-gold-500" />
           </div>
 
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
-            Služby, které <span className="gold-text">opravdu pomáhají</span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-tight">
+            Co pro vás <span className="gold-text">mohu zařídit</span>
           </h2>
 
-          <p className="mt-5 text-base sm:text-lg text-slate-300/90">
+          <p className="mt-4 text-base sm:text-lg text-slate-300/90 max-w-2xl">
             Komplexní finanční poradenství pod jednou střechou — od první
             analýzy až po dlouhodobou péči o vaše portfolio.
           </p>
