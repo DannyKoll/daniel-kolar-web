@@ -1,11 +1,11 @@
 import { Linkedin, Instagram, Facebook, Mail, Phone } from "lucide-react";
 
 const navLinks = [
-  { href: "#o-mne", label: "O mně" },
-  { href: "#sluzby", label: "Služby" },
-  { href: "#proces", label: "Jak pracuji" },
-  { href: "#reference", label: "Reference" },
-  { href: "#kontakt", label: "Kontakt" },
+  { href: "/#o-mne", label: "O mně" },
+  { href: "/#sluzby", label: "Služby" },
+  { href: "/#proces", label: "Jak pracuji" },
+  { href: "/#reference", label: "Reference" },
+  { href: "/#kontakt", label: "Kontakt" },
 ];
 
 const services = [
@@ -26,7 +26,7 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-8 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <a href="#top" className="inline-flex items-center gap-2.5 mb-4">
+            <a href="/" className="inline-flex items-center gap-2.5 mb-4">
               <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gold-300 to-gold-700 text-navy-950 font-display font-bold text-lg">
                 DK
               </span>
