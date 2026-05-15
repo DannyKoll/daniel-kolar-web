@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const links = [
   { href: "#o-mne", label: "O mně" },
@@ -13,6 +14,8 @@ const links = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const sectionHref = (href) => (pathname === "/" ? href : `/${href}`);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -31,7 +34,7 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
         <a
-          href="#top"
+          href={pathname === "/" ? "#top" : "/"}
           className="flex items-center gap-2.5 group"
           aria-label="Daniel Kolář"
         >
@@ -47,7 +50,7 @@ export default function Navbar() {
           {links.map((l) => (
             <li key={l.href}>
               <a
-                href={l.href}
+                href={sectionHref(l.href)}
                 className="relative py-2 hover:text-gold-300 transition-colors group"
               >
                 {l.label}
@@ -58,7 +61,7 @@ export default function Navbar() {
         </ul>
 
         <a
-          href="#kontakt"
+          href={sectionHref("#kontakt")}
           className="hidden lg:inline-flex btn-gold px-5 py-2.5 rounded-full text-sm font-semibold"
         >
           Sjednat schůzku
@@ -83,7 +86,7 @@ export default function Navbar() {
           {links.map((l) => (
             <li key={l.href}>
               <a
-                href={l.href}
+                href={sectionHref(l.href)}
                 onClick={() => setOpen(false)}
                 className="block px-3 py-3 text-slate-200 hover:text-gold-300 hover:bg-gold-500/5 rounded-lg transition-colors"
               >
@@ -93,7 +96,7 @@ export default function Navbar() {
           ))}
           <li className="mt-2">
             <a
-              href="#kontakt"
+              href={sectionHref("#kontakt")}
               onClick={() => setOpen(false)}
               className="block text-center btn-gold px-5 py-3 rounded-full text-sm font-semibold"
             >
