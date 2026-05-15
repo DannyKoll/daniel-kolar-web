@@ -11,13 +11,15 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-[88svh] flex items-center overflow-hidden pt-24 sm:pt-28 pb-10 sm:pb-12 lg:pb-14"
+      className="relative min-h-[90svh] flex items-center overflow-hidden pt-24 sm:pt-28 pb-12 sm:pb-14 lg:pb-16"
     >
       {/* Background layers */}
       <div className="absolute inset-0 bg-navy-950" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_70%_at_50%_0%,rgba(19,47,78,0.9)_0%,rgba(7,23,43,1)_70%)]" />
-      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full bg-gold-500/10 blur-3xl animate-float" />
-      <div className="absolute -bottom-32 -right-32 w-[450px] h-[450px] rounded-full bg-navy-700/40 blur-3xl" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_72%_at_58%_0%,rgba(30,68,110,0.95)_0%,rgba(12,35,64,0.92)_42%,rgba(7,23,43,1)_78%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.05)_0%,transparent_40%,rgba(201,169,97,0.08)_100%)]" />
+      <div className="absolute -top-40 -left-40 w-[520px] h-[520px] rounded-full bg-gold-500/12 blur-3xl animate-float" />
+      <div className="absolute -bottom-32 -right-32 w-[480px] h-[480px] rounded-full bg-navy-600/45 blur-3xl" />
+      <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-navy-950" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 w-full">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -41,7 +43,7 @@ export default function Hero() {
               získat <span className="italic font-medium">maximum</span>
             </h1>
 
-            <p className="mt-7 text-base sm:text-lg text-slate-300/90 max-w-xl mx-auto lg:mx-0 leading-relaxed reveal">
+            <p className="mt-7 text-base sm:text-lg text-slate-200/90 max-w-xl mx-auto lg:mx-0 leading-relaxed reveal">
               Profesionální, srozumitelné a nezávislé finanční poradenství pro lidi, kteří chtějí se svými penězi nakládat chytře a s klidem.
             </p>
 
@@ -61,11 +63,11 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="mt-7 grid grid-cols-3 gap-3 max-w-xl mx-auto lg:mx-0 reveal">
+            <div className="mt-7 grid grid-cols-3 gap-2 sm:gap-3 max-w-xl mx-auto lg:mx-0 reveal">
               {trustStats.map((stat) => (
                 <div
                   key={stat.value}
-                  className="border-t border-gold-500/20 pt-3 text-center lg:text-left"
+                  className="rounded-xl border border-white/10 bg-white/[0.035] px-3 py-3 text-center lg:text-left backdrop-blur-sm"
                 >
                   <div className="font-display text-lg sm:text-xl text-white leading-none">
                     {stat.value}
@@ -82,21 +84,21 @@ export default function Hero() {
           <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end reveal">
             <div className="relative photo-frame">
               {/* Decorative gold ring */}
-              <div className="absolute -inset-3 sm:-inset-4 rounded-[2.2rem] border border-gold-500/30 rotate-[-2deg]" />
-              <div className="absolute -inset-1 sm:-inset-1.5 rounded-[2rem] bg-gradient-to-br from-gold-400/30 via-transparent to-gold-700/30 blur-sm" />
+              <div className="absolute -inset-3 sm:-inset-4 rounded-[2.2rem] border border-gold-500/35 rotate-[-2deg]" />
+              <div className="absolute -inset-1 sm:-inset-1.5 rounded-[2rem] bg-gradient-to-br from-gold-300/35 via-transparent to-gold-700/30 blur-sm" />
 
               {/* Main photo container */}
-              <div className="relative w-[260px] h-[320px] sm:w-[320px] sm:h-[400px] lg:w-[380px] lg:h-[470px] rounded-[1.8rem] overflow-hidden border border-gold-500/40 shadow-card bg-navy-800">
+              <div className="relative w-[260px] h-[320px] sm:w-[320px] sm:h-[400px] lg:w-[380px] lg:h-[470px] rounded-[1.8rem] overflow-hidden border border-gold-400/50 shadow-card bg-navy-800">
                 <Image
                   src="/daniel-hero.jpg"
                   alt="Daniel Kolář — finanční poradce"
                   fill
                   priority
                   sizes="(max-width: 640px) 260px, (max-width: 1024px) 320px, 380px"
-                  className="object-cover"
+                  className="object-cover brightness-110 contrast-105 saturate-105"
                 />
                 {/* Gradient overlay for color harmony */}
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/24 via-transparent to-transparent pointer-events-none" />
               </div>
             </div>
           </div>
