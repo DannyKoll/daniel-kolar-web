@@ -7,6 +7,7 @@ import {
   Building2,
   ArrowUpRight,
 } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -14,6 +15,7 @@ const services = [
     title: "Investice",
     desc: "Sestavím vám portfolio na míru — od konzervativních fondů po akciové strategie. Vždy s ohledem na váš cíl, časový horizont a postoj k riziku.",
     bullets: ["Pravidelné investice", "Jednorázové vklady", "ETF & podílové fondy"],
+    href: "/investice",
   },
   {
     icon: Shield,
@@ -89,12 +91,9 @@ export default function Services() {
   );
 }
 
-function ServiceCard({ icon: Icon, title, desc, bullets, index, delay }) {
-  return (
-    <article
-      className="service-card group relative overflow-hidden rounded-2xl p-7 sm:p-8 reveal"
-      style={{ transitionDelay: `${delay}ms` }}
-    >
+function ServiceCard({ icon: Icon, title, desc, bullets, href, index, delay }) {
+  const cardContent = (
+    <>
       <div className="absolute right-6 top-6 font-display text-5xl text-white/[0.035] transition-colors group-hover:text-gold-500/10">
         {String(index).padStart(2, "0")}
       </div>
@@ -132,6 +131,31 @@ function ServiceCard({ icon: Icon, title, desc, bullets, index, delay }) {
           <ArrowUpRight size={15} />
         </span>
       </div>
+    </>
+  );
+
+  const className =
+    "service-card group relative block overflow-hidden rounded-2xl p-7 sm:p-8 reveal";
+
+  if (href) {
+    return (
+      <Link
+        href={href}
+        aria-label={`Zjistit více: ${title}`}
+        className={className}
+        style={{ transitionDelay: `${delay}ms` }}
+      >
+        {cardContent}
+      </Link>
+    );
+  }
+
+  return (
+    <article
+      className="service-card group relative overflow-hidden rounded-2xl p-7 sm:p-8 reveal"
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      {cardContent}
     </article>
   );
 }
