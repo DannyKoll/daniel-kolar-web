@@ -9,11 +9,11 @@ const navLinks = [
 ];
 
 const services = [
-  "Investice",
-  "Pojištění",
-  "Hypotéky",
-  "Penzijní plán",
   "Finanční plán",
+  "Tvorba rezerv",
+  "Ochrana příjmu",
+  "Financování bydlení",
+  "Dlouhodobá péče",
 ];
 
 export default function Footer() {

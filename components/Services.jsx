@@ -4,48 +4,45 @@ import {
   Home,
   Wallet,
   PiggyBank,
-  Building2,
-  ArrowUpRight,
+  RefreshCw,
 } from "lucide-react";
-import Link from "next/link";
 
 const services = [
   {
+    icon: Wallet,
+    title: "Finanční plán",
+    desc: "Finanční plán dává jednotlivým rozhodnutím směr. Pomáhá udržet přehled v příjmech, výdajích, rezervách, bydlení, ochraně i investicích tak, aby finance nestály vedle sebe náhodně, ale dávaly smysl vůči vašemu životu, cílům a plánům do budoucna.",
+    bullets: ["Přehled a souvislosti", "Jasné priority", "Rozhodnutí, která do sebe zapadají"],
+  },
+  {
     icon: TrendingUp,
-    title: "Investice",
-    desc: "Sestavím vám portfolio na míru — od konzervativních fondů po akciové strategie. Vždy s ohledem na váš cíl, časový horizont a postoj k riziku.",
-    bullets: ["Pravidelné investice", "Jednorázové vklady", "ETF & podílové fondy"],
-    href: "/investice",
+    title: "Tvorba rezervy a majetku",
+    desc: "Peníze mají mít různé role. Něco má být po ruce, něco má sloužit na cíle v příštích letech a něco má dlouhodobě růst. Pomohu vám nastavit systém, ve kterém máte rezervu, plán i prostor pro budování majetku.",
+    bullets: ["Rezerva po ruce", "Peníze na střednědobé cíle", "Dlouhodobé budování majetku"],
   },
   {
     icon: Shield,
-    title: "Pojištění",
-    desc: "Ochrana, která dává smysl. Postavím pojistnou ochranu rodiny i majetku tak, aby skutečně kryla rizika, která vás mohou ohrozit — bez zbytečných nákladů.",
-    bullets: ["Životní pojištění", "Majetek a odpovědnost", "Pojištění příjmu"],
+    title: "Ochrana příjmu a rodiny",
+    desc: "Dobře nastavená ochrana má držet váš život pohromadě i ve chvíli, kdy přijde nemoc, úraz nebo výpadek příjmu. Cílem není platit co nejvíc, ale chránit to, co by vás a vaši rodinu opravdu mohlo finančně rozhodit.",
+    bullets: ["Příjem domácnosti", "Rodina a závazky", "Majetek a odpovědnost"],
   },
   {
     icon: Home,
-    title: "Hypotéky",
-    desc: "Provedu vás celým procesem — od porovnání nabídek bank, přes vyjednání podmínek, až po podpis a refinancování. Bez papírování navíc.",
-    bullets: ["Nová hypotéka", "Refinancování", "Konsolidace úvěrů"],
+    title: "Financování bydlení",
+    desc: "Bydlení není jen hypotéka a splátka. Důležité je vědět, kolik je bezpečné si půjčit, jak úvěr zapadne do rozpočtu a jak s ním pracovat do budoucna. Cílem není hypotéku jen získat, ale nastavit ji tak, aby vás zbytečně nebrzdila — a ideálně jste se jí mohli zbavit dřív.",
+    bullets: ["Bezpečná výše splátky", "Rezerva kolem bydlení", "Cesta k dřívějšímu splacení"],
   },
   {
     icon: PiggyBank,
-    title: "Penzijní plán",
-    desc: "Důstojná penze není automatická. Připravíme strategii, jak pravidelně budovat rezervu, která vám v důchodu skutečně něco přinese.",
-    bullets: ["DPS a doplňkové spoření", "Investiční penzijní plány", "Optimalizace státních příspěvků"],
+    title: "Renta a finanční svoboda",
+    desc: "Dlouhodobě nastavujeme finance tak, aby jednou část vašich příjmů nestála jen na aktivní práci. Cílem je postupně budovat majetek, který vám v budoucnu dá větší klid, více možností a menší závislost na práci.",
+    bullets: ["Dlouhý horizont", "Pravidelné investování", "Budoucí příjem z majetku"],
   },
   {
-    icon: Wallet,
-    title: "Finanční plán",
-    desc: "Komplexní pohled na vaše finance — příjmy, výdaje, rezervy, závazky. Sjednotíme to do jasné strategie, kterou pochopí každý člen rodiny.",
-    bullets: ["Analýza rozpočtu", "Krátkodobé i dlouhodobé cíle", "Roční revize"],
-  },
-  {
-    icon: Building2,
-    title: "Firemní řešení",
-    desc: "Pro podnikatele a firmy — od ochrany klíčových osob, přes optimalizaci pojištění majetku, až po investování firemních volných prostředků.",
-    bullets: ["Pojištění odpovědnosti", "Benefity pro zaměstnance", "Cash management"],
+    icon: RefreshCw,
+    title: "Dlouhodobá péče",
+    desc: "Když s klientem navážu spolupráci, beru ji dlouhodobě. Chci vás doprovázet k vašim cílům, pravidelně se vracet k tomu, co už máte nastavené, a hlídat, abyste zbytečně neplatili víc, než je nutné — například kvůli zdražujícím smlouvám nebo změnám ze strany institucí.",
+    bullets: ["Dlouhodobá spolupráce", "Pravidelné kontroly nastavení", "Hlídání zbytečných nákladů"],
   },
 ];
 
@@ -71,12 +68,15 @@ export default function Services() {
           </div>
 
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
-            Služby, které <span className="gold-text">opravdu pomáhají</span>
+            Finance poskládané do{" "}
+            <span className="gold-text">jednoho plánu</span>
           </h2>
 
           <p className="mt-5 text-base sm:text-lg text-slate-300/90">
-            Komplexní finanční poradenství pod jednou střechou — od první
-            analýzy až po dlouhodobou péči o vaše portfolio.
+            Nejde o to mít několik smluv vedle sebe. Důležité je, aby rezerva,
+            bydlení, ochrana příjmu, investice i budoucí renta dávaly smysl
+            společně — vzhledem k vašemu životu, cílům a tomu, co se může v
+            čase měnit.
           </p>
         </div>
 
@@ -91,9 +91,12 @@ export default function Services() {
   );
 }
 
-function ServiceCard({ icon: Icon, title, desc, bullets, href, index, delay }) {
-  const cardContent = (
-    <>
+function ServiceCard({ icon: Icon, title, desc, bullets, index, delay }) {
+  return (
+    <article
+      className="service-card group relative overflow-hidden rounded-2xl p-7 sm:p-8 reveal"
+      style={{ transitionDelay: `${delay}ms` }}
+    >
       <div className="absolute right-6 top-6 font-display text-5xl text-white/[0.035] transition-colors group-hover:text-gold-500/10">
         {String(index).padStart(2, "0")}
       </div>
@@ -124,38 +127,6 @@ function ServiceCard({ icon: Icon, title, desc, bullets, href, index, delay }) {
           </li>
         ))}
       </ul>
-
-      <div className="mt-7 flex items-center justify-between border-t border-white/10 pt-5 text-xs sm:text-sm text-gold-400/85 group-hover:text-gold-300 transition-colors">
-        <span>Zjistit více</span>
-        <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-gold-500/25 bg-gold-500/[0.06] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-          <ArrowUpRight size={15} />
-        </span>
-      </div>
-    </>
-  );
-
-  const className =
-    "service-card group relative block overflow-hidden rounded-2xl p-7 sm:p-8 reveal";
-
-  if (href) {
-    return (
-      <Link
-        href={href}
-        aria-label={`Zjistit více: ${title}`}
-        className={className}
-        style={{ transitionDelay: `${delay}ms` }}
-      >
-        {cardContent}
-      </Link>
-    );
-  }
-
-  return (
-    <article
-      className="service-card group relative overflow-hidden rounded-2xl p-7 sm:p-8 reveal"
-      style={{ transitionDelay: `${delay}ms` }}
-    >
-      {cardContent}
     </article>
   );
 }

@@ -44,7 +44,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-7 text-base sm:text-lg text-slate-200/90 max-w-xl mx-auto lg:mx-0 leading-relaxed reveal">
-              Profesionální, srozumitelné a nezávislé finanční poradenství pro lidi, kteří chtějí se svými penězi nakládat chytře a s klidem.
+              Pomáhám lidem získat ve financích jasno, nastavit správný směr a dlouhodobě ho udržovat. S osobní péčí, ke které se můžete vrátit vždy, když se ve vašem životě něco změní.
             </p>
 
             <div className="mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center lg:justify-start reveal">
