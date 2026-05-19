@@ -21,7 +21,7 @@ export default function About() {
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Image left */}
-          <div className="lg:col-span-5 reveal">
+          <div className="order-2 lg:order-1 lg:col-span-5 reveal">
             <div className="relative max-w-md mx-auto lg:mx-0">
               {/* Decorative offset border */}
               <div className="absolute -inset-3 sm:-inset-4 border border-gold-500/30 rounded-[1.8rem] translate-x-3 translate-y-3" />
@@ -42,7 +42,7 @@ export default function About() {
           </div>
 
           {/* Content right */}
-          <div className="lg:col-span-7 reveal">
+          <div className="order-1 lg:order-2 lg:col-span-7 reveal">
             <div className="inline-flex items-center gap-2 mb-5">
               <span className="h-px w-10 bg-gold-500" />
               <span className="text-xs sm:text-sm tracking-[0.25em] uppercase text-gold-400">
