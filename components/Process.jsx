@@ -1,29 +1,34 @@
-import { Coffee, Search, Compass, Handshake } from "lucide-react";
+import {
+  Coffee,
+  Search,
+  Compass,
+  HeartHandshake,
+} from "lucide-react";
 
 const steps = [
   {
     n: "01",
     icon: Coffee,
     title: "Nezávazné setkání",
-    desc: "Sejdeme se osobně nebo online. Posloucháme, ptám se, ujasníme si, co od financí potřebujete a kam chcete dojít.",
+    desc: "Nejdřív mě zajímáte vy — vaše zkušenosti, plány a to, co je pro vás ve financích důležité. A pokud přicházíte s konkrétní otázkou, začneme právě u ní.",
   },
   {
     n: "02",
     icon: Search,
-    title: "Analýza vaší situace",
-    desc: "Projdu vaše stávající smlouvy, příjmy, výdaje i závazky. Zjistím, kde leží rezervy a co je potřeba ošetřit přednostně.",
+    title: "Širší pohled",
+    desc: "Podíváme se na vaše finance v souvislostech, aby dávaly smysl vůči vašemu životu, cílům i tomu, kam se chcete posunout.",
   },
   {
     n: "03",
     icon: Compass,
-    title: "Návrh řešení na míru",
-    desc: "Připravím přehledný plán s konkrétními kroky. Vše vám srozumitelně vysvětlím a společně dolaďujeme detaily.",
+    title: "Plán na míru",
+    desc: "Připravím vám plán, který odpovídá vám, vašemu životu a tomu, co od peněz očekáváte. Ukážu vám, jak z nich získat maximum.",
   },
   {
     n: "04",
-    icon: Handshake,
-    title: "Realizace a péče",
-    desc: "Pomůžu vám vše zařídit, ušetřím čas i papírování. A pravidelně se vracíme, abychom plán aktualizovali podle života.",
+    icon: HeartHandshake,
+    title: "Dlouhodobá péče",
+    desc: "Pomohu vám projít konkrétními kroky a budu s vámi průběžně sledovat změny, aby vaše finance dál dávaly smysl v souvislostech.",
   },
 ];
 
@@ -31,29 +36,29 @@ export default function Process() {
   return (
     <section
       id="proces"
-      className="relative py-20 sm:py-28 lg:py-36 overflow-hidden"
+      className="relative pt-8 pb-20 sm:pt-12 sm:pb-28 lg:pt-16 lg:pb-36 overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-navy-950 via-navy-900/95 to-navy-950" />
       <div className="absolute right-0 top-1/4 w-[500px] h-[500px] rounded-full bg-gold-500/[0.04] blur-3xl" />
       <div className="absolute left-0 bottom-0 w-[420px] h-[420px] rounded-full bg-navy-600/25 blur-3xl" />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20 reveal">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 reveal">
           <div className="inline-flex items-center gap-2 mb-5">
             <span className="h-px w-10 bg-gold-500" />
             <span className="text-xs sm:text-sm tracking-[0.25em] uppercase text-gold-400">
-              Jak spolupracujeme
+              Cesta k vašemu finančnímu klidu
             </span>
             <span className="h-px w-10 bg-gold-500" />
           </div>
 
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
-            Cesta k vašemu <span className="gold-text">finančnímu klidu</span>
+            Jak <span className="gold-text">spolupracujeme</span>
           </h2>
 
-          <p className="mt-5 text-base sm:text-lg text-slate-300/90">
-            Spolupráce probíhá v jasných krocích. Nikdy nic nepodepisujete bez
-            toho, abyste přesně věděli, co a proč.
+          <p className="mt-5 text-base sm:text-lg text-slate-300/90 leading-relaxed">
+            Od prvního setkání až po dlouhodobou péči — srozumitelně, lidsky a
+            podle toho, co je pro vás důležité.
           </p>
         </div>
 

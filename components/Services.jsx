@@ -50,7 +50,7 @@ export default function Services() {
   return (
     <section
       id="sluzby"
-      className="relative py-20 sm:py-28 lg:py-36 overflow-hidden"
+      className="relative pt-20 pb-8 sm:pt-28 sm:pb-12 lg:pt-36 lg:pb-16 overflow-hidden"
     >
       <div className="absolute inset-0 bg-navy-950" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_85%_55%_at_50%_0%,rgba(19,47,78,0.72)_0%,rgba(7,23,43,0)_72%)]" />
