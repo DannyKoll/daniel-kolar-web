@@ -90,15 +90,31 @@ export default function Hero() {
               {/* Main photo container */}
               <div className="relative w-[260px] h-[320px] sm:w-[320px] sm:h-[400px] lg:w-[380px] lg:h-[470px] rounded-[1.8rem] overflow-hidden border border-gold-400/50 shadow-card bg-navy-800">
                 <Image
-                  src="/daniel-hero.jpg"
+                  src="/foto-web-homepage.jpg"
+                  alt=""
+                  fill
+                  sizes="(max-width: 640px) 260px, (max-width: 1024px) 320px, 380px"
+                  aria-hidden="true"
+                  className="object-cover object-[50%_44%] scale-110 blur-[14px] brightness-[0.7] contrast-110 saturate-[0.7]"
+                />
+                <Image
+                  src="/foto-web-homepage.jpg"
                   alt="Daniel Kolář — finanční poradce"
                   fill
                   priority
                   sizes="(max-width: 640px) 260px, (max-width: 1024px) 320px, 380px"
-                  className="object-cover brightness-110 contrast-105 saturate-105"
+                  className="object-cover object-[50%_44%] brightness-[0.97] contrast-105 saturate-[0.88]"
+                  style={{
+                    WebkitMaskImage:
+                      "radial-gradient(ellipse 78% 90% at 50% 55%, #000 0%, #000 63%, rgba(0,0,0,0.72) 74%, transparent 100%)",
+                    maskImage:
+                      "radial-gradient(ellipse 78% 90% at 50% 55%, #000 0%, #000 63%, rgba(0,0,0,0.72) 74%, transparent 100%)",
+                  }}
                 />
                 {/* Gradient overlay for color harmony */}
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/24 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-navy-900/18 mix-blend-multiply pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/38 via-transparent to-navy-900/18 pointer-events-none" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_68%_72%_at_50%_48%,transparent_0%,transparent_54%,rgba(7,23,43,0.46)_100%)] pointer-events-none" />
               </div>
             </div>
           </div>
