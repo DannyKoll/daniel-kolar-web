@@ -3,8 +3,8 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 const trustStats = [
   { value: "11+", label: "let praxe" },
-  { value: "Nezávisle", label: "bez tlaku na produkt" },
-  { value: "Dlouhodobě", label: "péče i po podpisu" },
+  { value: "Nezávisle", label: "podle vašich potřeb" },
+  { value: "Dlouhodobě", label: "péče v čase" },
 ];
 
 export default function Hero() {
