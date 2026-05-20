@@ -114,9 +114,7 @@ export default function Footer() {
             </ul>
 
             <div className="mt-5 text-xs text-slate-500 leading-relaxed">
-              IČO: 000 000 00
-              <br />
-              Zapsán v registru ČNB
+              IČO: 03863620
             </div>
           </div>
         </div>
