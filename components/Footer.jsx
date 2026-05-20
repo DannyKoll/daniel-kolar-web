@@ -95,20 +95,20 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:+420000000000"
+                  href="tel:+420723988447"
                   className="flex items-center gap-2 text-sm text-slate-300 hover:text-gold-300 transition-colors"
                 >
                   <Phone size={14} className="text-gold-500" />
-                  +420 000 000 000
+                  +420 723 988 447
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@danielkolar.cz"
+                  href="mailto:d.kolar@westfair.cz"
                   className="flex items-center gap-2 text-sm text-slate-300 hover:text-gold-300 transition-colors"
                 >
                   <Mail size={14} className="text-gold-500" />
-                  info@danielkolar.cz
+                  d.kolar@westfair.cz
                 </a>
               </li>
             </ul>
