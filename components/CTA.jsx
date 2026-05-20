@@ -14,13 +14,13 @@ export default function CTA() {
   return (
     <section
       id="kontakt"
-      className="relative pt-12 pb-20 sm:pt-16 sm:pb-28 lg:pt-20 lg:pb-36 overflow-hidden"
+      className="relative pt-10 pb-20 sm:pt-12 sm:pb-28 lg:pt-16 lg:pb-36 overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,rgba(201,169,97,0.08)_0%,transparent_70%)]" />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 reveal">
+        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 lg:mb-24 reveal">
           <div className="inline-flex items-center gap-2 mb-5">
             <span className="h-px w-10 bg-gold-500" />
             <span className="text-xs sm:text-sm tracking-[0.25em] uppercase text-gold-400">
