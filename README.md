@@ -57,7 +57,7 @@ npm start
 - **Texty:** všechny texty jsou v komponentech v `components/`. Hledejte český text a klidně přepisujte.
 - **Barvy:** primární paleta je v `tailwind.config.js` (`navy` + `gold`).
 - **Fotka:** nahraďte `public/daniel.jpg` vlastní fotkou (zachovejte stejný název nebo upravte cesty v `Hero.jsx` a `About.jsx`).
-- **Kontakty:** placeholder telefonní číslo, email a IČO upravte v `CTA.jsx` a `Footer.jsx`.
+- **Kontakty:** telefon a e-mail jsou v `CTA.jsx` a `Footer.jsx`. IČO případně upravte ve `Footer.jsx`.
 
 ## Napojení formuláře
 
