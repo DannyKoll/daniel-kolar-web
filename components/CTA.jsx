@@ -14,7 +14,7 @@ export default function CTA() {
   return (
     <section
       id="kontakt"
-      className="relative py-20 sm:py-28 lg:py-36 overflow-hidden"
+      className="relative pt-12 pb-20 sm:pt-16 sm:pb-28 lg:pt-20 lg:pb-36 overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,rgba(201,169,97,0.08)_0%,transparent_70%)]" />
