@@ -83,7 +83,7 @@ export default function Services() {
         {/* Cards grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {services.map((s, i) => (
-            <ServiceCard key={s.title} {...s} index={i + 1} delay={i * 80} />
+            <ServiceCard key={s.title} {...s} delay={i * 80} />
           ))}
         </div>
       </div>
@@ -91,16 +91,12 @@ export default function Services() {
   );
 }
 
-function ServiceCard({ icon: Icon, title, desc, bullets, index, delay }) {
+function ServiceCard({ icon: Icon, title, desc, bullets, delay }) {
   return (
     <article
       className="service-card group relative overflow-hidden rounded-2xl p-7 sm:p-8 reveal"
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="absolute right-6 top-6 font-display text-5xl text-white/[0.035] transition-colors group-hover:text-gold-500/10">
-        {String(index).padStart(2, "0")}
-      </div>
-
       <div className="relative mb-6 flex items-center justify-between gap-4">
         <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-gold-500/25 bg-gold-500/[0.08] shadow-[0_16px_40px_-28px_rgba(201,169,97,0.9)]">
           <Icon size={25} className="text-gold-300" />
