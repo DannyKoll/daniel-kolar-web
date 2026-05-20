@@ -2,10 +2,10 @@ import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 
 const points = [
-  "Individuální přístup ke každému klientovi",
-  "Nezávislost na konkrétní bance či pojišťovně",
-  "Dlouhodobá spolupráce, ne jednorázový prodej",
-  "Srozumitelná řeč bez složitého žargonu",
+  "Osobní přístup ke každému klientovi",
+  "Řešení podle vašich potřeb",
+  "Spolupráce, která se přizpůsobuje životu",
+  "Srozumitelně, bez zbytečných složitostí",
 ];
 
 export default function About() {
