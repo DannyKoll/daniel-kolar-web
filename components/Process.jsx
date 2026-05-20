@@ -7,25 +7,21 @@ import {
 
 const steps = [
   {
-    n: "01",
     icon: Coffee,
     title: "Nezávazné setkání",
     desc: "Nejdřív mě zajímáte vy — vaše zkušenosti, plány a to, co je pro vás ve financích důležité. A pokud přicházíte s konkrétní otázkou, začneme právě u ní.",
   },
   {
-    n: "02",
     icon: Search,
     title: "Širší pohled",
     desc: "Podíváme se na vaše finance v souvislostech, aby dávaly smysl vůči vašemu životu, cílům i tomu, kam se chcete posunout.",
   },
   {
-    n: "03",
     icon: Compass,
     title: "Plán na míru",
     desc: "Připravím vám plán, který odpovídá vám, vašemu životu a tomu, co od peněz očekáváte. Ukážu vám, jak z nich získat maximum.",
   },
   {
-    n: "04",
     icon: HeartHandshake,
     title: "Dlouhodobá péče",
     desc: "Pomohu vám projít konkrétními kroky a budu s vámi průběžně sledovat změny, aby vaše finance dál dávaly smysl v souvislostech.",
@@ -36,7 +32,7 @@ export default function Process() {
   return (
     <section
       id="proces"
-      className="relative pt-8 pb-20 sm:pt-12 sm:pb-28 lg:pt-16 lg:pb-36 overflow-hidden"
+      className="relative pt-8 pb-12 sm:pt-12 sm:pb-16 lg:pt-16 lg:pb-20 overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-navy-950 via-navy-900/95 to-navy-950" />
       <div className="absolute right-0 top-1/4 w-[500px] h-[500px] rounded-full bg-gold-500/[0.04] blur-3xl" />
@@ -67,7 +63,7 @@ export default function Process() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
             {steps.map((s, i) => (
-              <Step key={s.n} {...s} delay={i * 100} />
+              <Step key={s.title} {...s} delay={i * 100} />
             ))}
           </div>
         </div>
@@ -76,7 +72,7 @@ export default function Process() {
   );
 }
 
-function Step({ n, icon: Icon, title, desc, delay }) {
+function Step({ icon: Icon, title, desc, delay }) {
   return (
     <article
       className="relative rounded-2xl border border-gold-500/10 bg-navy-950/45 p-5 sm:p-6 reveal"
@@ -86,7 +82,6 @@ function Step({ n, icon: Icon, title, desc, delay }) {
         <div className="relative z-10 inline-flex h-14 w-14 items-center justify-center rounded-full border border-gold-500/25 bg-gradient-to-br from-navy-800 to-navy-950 shadow-[0_18px_36px_-28px_rgba(201,169,97,0.9)]">
           <Icon size={23} className="text-gold-300" />
         </div>
-        <span className="font-display text-3xl text-gold-400/45">{n}</span>
       </div>
 
       <h3 className="font-display text-lg sm:text-xl text-white mb-3">
