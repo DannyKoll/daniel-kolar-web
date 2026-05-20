@@ -45,15 +45,14 @@ export default function CTA() {
             <ContactCard
               icon={<Phone size={20} />}
               label="Telefon"
-              value="+420 000 000 000"
-              href="tel:+420000000000"
-              note="Po–Pá 9:00–18:00"
+              value="+420 723 988 447"
+              href="tel:+420723988447"
             />
             <ContactCard
               icon={<Mail size={20} />}
               label="E-mail"
-              value="info@danielkolar.cz"
-              href="mailto:info@danielkolar.cz"
+              value="d.kolar@westfair.cz"
+              href="mailto:d.kolar@westfair.cz"
               note="Odpověď do 24 h"
             />
             <ContactCard
