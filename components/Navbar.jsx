@@ -63,7 +63,7 @@ export default function Navbar() {
           href={sectionHref("#kontakt")}
           className="hidden lg:inline-flex btn-gold px-5 py-2.5 rounded-full text-sm font-semibold"
         >
-          Sjednat schůzku
+          Domluvit schůzku
         </a>
 
         <button
