@@ -61,11 +61,19 @@ npm start
 
 ## Napojení formuláře
 
-Formulář v `CTA.jsx` zatím jen zobrazuje potvrzení — pro skutečné odesílání e‑mailů doporučuji:
+Kontaktní formulář odesílá zprávy přes Next.js API route `app/api/contact/route.js` a službu Resend.
 
-- [Formspree](https://formspree.io) (nejjednodušší, free tier)
-- [Resend](https://resend.com) (vlastní API přes Next.js route handler)
-- [EmailJS](https://www.emailjs.com)
+Pro lokální test vytvoř soubor `.env.local` podle `.env.example`:
+
+```bash
+RESEND_API_KEY=...
+CONTACT_TO_EMAIL=d.kolar@westfair.cz
+CONTACT_FROM_EMAIL="Web Daniela Koláře <onboarding@resend.dev>"
+```
+
+Stejné proměnné je potřeba nastavit ve Vercelu v **Project Settings → Environment Variables**.
+Po napojení a ověření vlastní domény v Resendu změň `CONTACT_FROM_EMAIL` například na
+`Kontakt Daniel Kolář <kontakt@vasedomena.cz>`.
 
 ## Licence
 
