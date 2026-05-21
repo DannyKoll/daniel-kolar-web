@@ -3,13 +3,50 @@ import { useState } from "react";
 import { Phone, Mail, MapPin, ArrowRight, Send, CheckCircle2 } from "lucide-react";
 
 export default function CTA() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: napojit na backend / mail službu (např. Formspree, Resend, EmailJS)
-    setSubmitted(true);
+    setStatus("sending");
+    setErrorMessage("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          phone: formData.get("phone"),
+          email: formData.get("email"),
+          message: formData.get("message"),
+          consent: formData.get("gdpr") === "on",
+          website: formData.get("website"),
+        }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => null);
+        throw new Error(data?.message || "Zprávu se nepodařilo odeslat.");
+      }
+
+      setStatus("sent");
+      form.reset();
+    } catch (error) {
+      setStatus("idle");
+      setErrorMessage(
+        error.message ||
+          "Zprávu se nepodařilo odeslat. Zkuste to prosím znovu."
+      );
+    }
   };
+
+  const isSending = status === "sending";
 
   return (
     <section
@@ -77,7 +114,7 @@ export default function CTA() {
               onSubmit={handleSubmit}
               className="relative p-7 sm:p-9 rounded-3xl border border-gold-500/20 bg-gradient-to-b from-navy-900/80 to-navy-950/80 backdrop-blur-md shadow-card"
             >
-              {submitted ? (
+              {status === "sent" ? (
                 <div className="py-12 text-center">
                   <CheckCircle2
                     size={56}
@@ -92,6 +129,14 @@ export default function CTA() {
                 </div>
               ) : (
                 <>
+                  <input
+                    type="text"
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    className="hidden"
+                  />
+
                   <h3 className="font-display text-xl sm:text-2xl text-white mb-6">
                     Napište mi
                   </h3>
@@ -132,6 +177,7 @@ export default function CTA() {
                     <input
                       type="checkbox"
                       id="gdpr"
+                      name="gdpr"
                       required
                       className="mt-1 h-4 w-4 accent-gold-500 cursor-pointer"
                     />
@@ -139,16 +185,30 @@ export default function CTA() {
                       htmlFor="gdpr"
                       className="text-xs sm:text-sm text-slate-400 leading-relaxed cursor-pointer"
                     >
-                      Souhlasím se zpracováním osobních údajů pro účely
-                      vyřízení dotazu.
+                      Beru na vědomí, že mé osobní údaje budou zpracovány za
+                      účelem vyřízení mého dotazu. Více informací najdete v{" "}
+                      <a
+                        href="/zpracovani-osobnich-udaju"
+                        className="text-gold-300 transition-colors hover:text-gold-200"
+                      >
+                        zásadách ochrany osobních údajů
+                      </a>
+                      .
                     </label>
                   </div>
 
+                  {errorMessage && (
+                    <p className="mt-4 rounded-xl border border-red-400/20 bg-red-500/10 px-4 py-3 text-sm text-red-100">
+                      {errorMessage}
+                    </p>
+                  )}
+
                   <button
                     type="submit"
-                    className="btn-gold mt-6 w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm sm:text-base font-semibold"
+                    disabled={isSending}
+                    className="btn-gold mt-6 w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm sm:text-base font-semibold disabled:cursor-not-allowed disabled:opacity-70"
                   >
-                    Odeslat zprávu
+                    {isSending ? "Odesílám..." : "Odeslat zprávu"}
                     <Send size={16} />
                   </button>
                 </>
