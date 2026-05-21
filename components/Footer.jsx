@@ -15,6 +15,15 @@ const services = [
   "Dlouhodobá péče",
 ];
 
+const legalLinks = [
+  {
+    href: "/zpracovani-osobnich-udaju",
+    label: "Zpracování osobních údajů",
+  },
+  { href: "/cookies", label: "Cookies" },
+  { href: "/pravni-informace", label: "Právní informace" },
+];
+
 export default function Footer() {
   return (
     <footer className="relative pt-16 pb-8 overflow-hidden border-t border-gold-500/10">
@@ -34,8 +43,8 @@ export default function Footer() {
               </span>
             </a>
             <p className="text-sm text-slate-400 leading-relaxed">
-              Nezávislé finanční poradenství s důrazem na dlouhodobý výsledek a
-              osobní přístup.
+              Finanční poradenství s důrazem na dlouhodobou péči, souvislosti
+              a osobní přístup.
             </p>
 
             <div className="mt-5 flex items-center gap-3">
@@ -119,17 +128,32 @@ export default function Footer() {
           </div>
         </div>
 
+        <div className="mb-7 max-w-3xl text-xs leading-relaxed text-slate-500">
+          Daniel Kolář působí jako vázaný zástupce pro SAB servis s.r.o. Více
+          informací najdete v{" "}
+          <a
+            href="/pravni-informace"
+            className="text-slate-400 transition-colors hover:text-gold-300"
+          >
+            právních informacích
+          </a>
+          .
+        </div>
+
         <div className="pt-8 border-t border-gold-500/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
             © {new Date().getFullYear()} Daniel Kolář. Všechna práva vyhrazena.
           </div>
-          <div className="flex gap-5">
-            <a href="#" className="hover:text-gold-300 transition-colors">
-              Zásady ochrany osobních údajů
-            </a>
-            <a href="#" className="hover:text-gold-300 transition-colors">
-              Cookies
-            </a>
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
+            {legalLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="hover:text-gold-300 transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
