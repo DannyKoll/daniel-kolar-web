@@ -22,11 +22,11 @@ export default function About() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Image left */}
           <div className="order-2 lg:order-1 lg:col-span-5 reveal">
-            <div className="relative max-w-[24rem] mx-auto lg:mx-0">
+            <div className="relative w-[88%] max-w-[20rem] sm:w-full sm:max-w-[21rem] lg:max-w-[24rem] mx-auto lg:mx-0">
               {/* Decorative offset border */}
-              <div className="absolute -inset-3 sm:-inset-4 border border-gold-500/30 rounded-[1.8rem] translate-x-3 translate-y-3" />
-              <div className="absolute -top-6 -left-6 w-24 h-24 border-l-2 border-t-2 border-gold-500/40 rounded-tl-3xl hidden sm:block" />
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 border-r-2 border-b-2 border-gold-500/40 rounded-br-3xl hidden sm:block" />
+              <div className="absolute -inset-2 sm:-inset-4 border border-gold-500/30 rounded-[1.8rem] translate-x-2 translate-y-2 sm:translate-x-3 sm:translate-y-3" />
+              <div className="absolute -top-3 -left-3 sm:-top-6 sm:-left-6 w-14 h-14 sm:w-24 sm:h-24 border-l-2 border-t-2 border-gold-500/40 rounded-tl-2xl sm:rounded-tl-3xl" />
+              <div className="absolute -bottom-3 -right-3 sm:-bottom-6 sm:-right-6 w-14 h-14 sm:w-24 sm:h-24 border-r-2 border-b-2 border-gold-500/40 rounded-br-2xl sm:rounded-br-3xl" />
 
               <div className="relative aspect-[4/5] rounded-[1.5rem] overflow-hidden border border-gold-500/20 bg-navy-800 shadow-card">
                 <Image
