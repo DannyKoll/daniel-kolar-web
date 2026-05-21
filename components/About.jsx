@@ -30,7 +30,7 @@ export default function About() {
 
               <div className="relative aspect-[4/5] rounded-[1.5rem] overflow-hidden border border-gold-500/20 bg-navy-800 shadow-card">
                 <Image
-                  src="/daniel.jpg"
+                  src="/Foto-3.jpg"
                   alt="Daniel Kolář"
                   fill
                   sizes="(max-width: 1024px) 90vw, 40vw"
