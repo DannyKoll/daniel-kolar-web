@@ -32,7 +32,7 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] text-white reveal">
+            <h1 className="font-display text-[2.4rem] sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] text-white reveal">
               Pomohu vám
               <br />
               <span className="relative inline-block">
