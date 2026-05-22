@@ -40,7 +40,7 @@ export default function Hero() {
                 <span className="absolute -bottom-2 left-0 right-0 h-[2px] divider-line" />
               </span>
               <br />
-              získat <span className="italic font-medium">maximum</span>
+              získat maximum
             </h1>
 
             <p className="mt-7 text-base sm:text-lg text-slate-200/90 max-w-xl mx-auto lg:mx-0 leading-relaxed reveal">
