@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-[90svh] flex items-center overflow-hidden pt-24 sm:pt-28 pb-12 sm:pb-14 lg:pb-16"
+      className="relative min-h-[90svh] flex items-center overflow-hidden pt-32 sm:pt-28 pb-12 sm:pb-14 lg:pb-16"
     >
       {/* Background layers */}
       <div className="absolute inset-0 bg-navy-950" />
@@ -81,13 +81,13 @@ export default function Hero() {
               <div className="absolute -inset-1 sm:-inset-1.5 rounded-[2rem] bg-gradient-to-br from-gold-300/35 via-transparent to-gold-700/30 blur-sm" />
 
               {/* Main photo container */}
-              <div className="relative w-[260px] h-[320px] sm:w-[320px] sm:h-[400px] lg:w-[380px] lg:h-[470px] rounded-[1.8rem] overflow-hidden border border-gold-400/50 shadow-card bg-navy-800">
+              <div className="relative w-[244px] h-[300px] sm:w-[320px] sm:h-[400px] lg:w-[380px] lg:h-[470px] rounded-[1.8rem] overflow-hidden border border-gold-400/50 shadow-card bg-navy-800">
                 <Image
                   src="/Foto-web-homepage.jpg"
                   alt="Daniel Kolář — finanční poradce"
                   fill
                   priority
-                  sizes="(max-width: 640px) 260px, (max-width: 1024px) 320px, 380px"
+                  sizes="(max-width: 640px) 244px, (max-width: 1024px) 320px, 380px"
                   className="object-cover brightness-110 contrast-105 saturate-105"
                 />
                 {/* Gradient overlay for color harmony */}
