@@ -14,10 +14,13 @@ const playfair = Playfair_Display({
   weight: ["400", "500", "600", "700"],
 });
 
+const siteTitle = "Daniel Kolář | Osobní finanční poradce Plzeň";
+const siteDescription =
+  "Osobní finanční poradenství v Plzni a okolí. Pomáhám lidem mít ve financích jasno, správný směr a dlouhodobou péči.";
+
 export const metadata = {
-  title: "Daniel Kolář | Finanční poradenství na míru",
-  description:
-    "Finanční poradce Daniel Kolář — více než 11 let zkušeností s optimalizací a ochranou vašich financí. Investice, pojištění, hypotéky a penzijní plánování.",
+  title: siteTitle,
+  description: siteDescription,
   keywords: [
     "finanční poradce",
     "Daniel Kolář",
@@ -28,11 +31,15 @@ export const metadata = {
     "finance",
   ],
   openGraph: {
-    title: "Daniel Kolář | Finanční poradenství",
-    description:
-      "Pomohu vám od financí získat maximum. Více než 11 let zkušeností.",
+    title: siteTitle,
+    description: siteDescription,
     locale: "cs_CZ",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
   },
   robots: {
     index: true,
