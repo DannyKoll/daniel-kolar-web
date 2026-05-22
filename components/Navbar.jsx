@@ -31,17 +31,17 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-5 sm:px-8 h-24 sm:h-20 flex items-center justify-between">
         <a
           href={pathname === "/" ? "#top" : "/"}
-          className="flex items-center gap-2.5 group"
+          className="flex flex-col items-start leading-none group"
           aria-label="Daniel Kolář"
         >
-          <span className="relative inline-flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-gold-300 to-gold-700 text-navy-950 font-display font-bold text-lg shadow-glow">
-            DK
-          </span>
-          <span className="hidden sm:block text-slate-100 font-display text-lg tracking-wide">
+          <span className="font-display text-[2rem] sm:text-xl lg:text-lg xl:text-xl tracking-wide text-slate-100">
             Daniel <span className="gold-text">Kolář</span>
+          </span>
+          <span className="mt-2 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-300/90">
+            Osobní finanční poradce
           </span>
         </a>
 
