@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const trustStats = [
   { value: "11+", label: "let praxe" },
@@ -25,13 +25,6 @@ export default function Hero() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Text column */}
           <div className="lg:col-span-7 order-2 lg:order-1 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold-500/20 bg-gold-500/5 backdrop-blur-sm mb-6 reveal">
-              <Sparkles size={14} className="text-gold-400" />
-              <span className="text-xs sm:text-sm tracking-wider text-gold-200 uppercase">
-                Osobní finanční poradce
-              </span>
-            </div>
-
             <h1 className="font-display text-[2.4rem] sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] text-white reveal">
               Pomohu vám
               <br />
