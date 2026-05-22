@@ -61,12 +61,12 @@ export default function About() {
                 investice nebo důležitá životní rozhodnutí.
               </p>
               <p>
-                Mým cílem je, abyste se u mě cítili jako v&nbsp;bavlnce — že je
-                o&nbsp;vaše finance postaráno, věci mají směr a&nbsp;vy na to
-                nejste sami.
+                Mým cílem je, abyste se u mě cítili jako v&nbsp;bavlnce. Aby
+                bylo o&nbsp;vaše finance postaráno, věci měly směr a&nbsp;vy
+                jste na to nebyli sami.
               </p>
               <p className="text-slate-200">
-                Chci vás dobře poznat, rozumět vašemu životu i&nbsp;plánům
+                Chci vás dobře poznat, porozumět vašemu životu i&nbsp;plánům
                 a&nbsp;být pro vás parťákem, který vás finančně doprovází na
                 cestě životem. Tak, aby vaše peníze pracovaly hlavně pro
                 vás&nbsp;— a&nbsp;ne vy pořád jen pro ně.
