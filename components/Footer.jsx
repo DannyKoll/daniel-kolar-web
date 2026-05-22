@@ -98,3 +98,77 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
+            <h4 className="text-xs tracking-widest uppercase text-gold-400 mb-4">
+              Kontakt
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="tel:+420723988447"
+                  className="flex items-center gap-2 text-sm text-slate-300 hover:text-gold-300 transition-colors"
+                >
+                  <Phone size={14} className="text-gold-500" />
+                  +420 723 988 447
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:d.kolar@westfair.cz"
+                  className="flex items-center gap-2 text-sm text-slate-300 hover:text-gold-300 transition-colors"
+                >
+                  <Mail size={14} className="text-gold-500" />
+                  d.kolar@westfair.cz
+                </a>
+              </li>
+            </ul>
+
+            <div className="mt-5 text-xs text-slate-500 leading-relaxed">
+              IČO: 03863620
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-7 max-w-3xl text-xs leading-relaxed text-slate-500">
+          Daniel Kolář působí jako vázaný zástupce pro SAB servis s.r.o. Více
+          informací najdete v{" "}
+          <a
+            href="/pravni-informace"
+            className="text-slate-400 transition-colors hover:text-gold-300"
+          >
+            právních informacích
+          </a>
+          .
+        </div>
+
+        <div className="pt-8 border-t border-gold-500/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <div>
+            © {new Date().getFullYear()} Daniel Kolář. Všechna práva vyhrazena.
+          </div>
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
+            {legalLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="hover:text-gold-300 transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function SocialIcon({ href, label, children }) {
+  return (
+    <a
+      href={href}
+      aria-label={label}
+      className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-gold-500/20 bg-navy-900/40 text-gold-400 hover:bg-gold-500/10 hover:border-gold-500/40 hover:text-gold-300 transition-all"
+    >
+      {children}
+    </a>
+  );
+}
