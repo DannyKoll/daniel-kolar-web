@@ -46,7 +46,7 @@ export default function About() {
             <div className="inline-flex items-center gap-2 mb-5">
               <span className="h-px w-10 bg-gold-500" />
               <span className="text-xs sm:text-sm tracking-[0.25em] uppercase text-gold-400">
-                O mně
+                Můj přístup
               </span>
             </div>
 
