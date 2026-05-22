@@ -67,9 +67,11 @@ export default function About() {
               </p>
               <p className="text-slate-200">
                 Chci vás dobře poznat, porozumět vašim plánům i&nbsp;tomu, co
-                je pro vás důležité, a&nbsp;být pro vás parťákem, na kterého se
-                můžete dlouhodobě obracet. Tak, aby vaše peníze pracovaly
-                hlavně pro vás&nbsp;— a&nbsp;ne vy pořád jen pro ně.
+                je pro vás důležité, a&nbsp;být pro vás parťákem, který se
+                o&nbsp;vaše finance stará dlouhodobě. Pravidelně se k&nbsp;nim
+                spolu vracíme a&nbsp;já průběžně hlídám, aby věci dávaly smysl
+                i&nbsp;dál. Tak, aby vaše peníze pracovaly hlavně pro
+                vás&nbsp;— a&nbsp;ne vy pořád jen pro ně.
               </p>
             </div>
 
