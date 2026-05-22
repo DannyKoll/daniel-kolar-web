@@ -37,7 +37,7 @@ export default function Navbar() {
           className="flex flex-col items-start leading-none group"
           aria-label="Daniel Kolář"
         >
-          <span className="font-display text-[2rem] sm:text-xl lg:text-lg xl:text-xl tracking-wide text-slate-100">
+          <span className="font-display text-[1.7rem] sm:text-xl lg:text-xl xl:text-[1.375rem] tracking-wide text-slate-100">
             Daniel Kolář
           </span>
           <span className="mt-2 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-300/90">
