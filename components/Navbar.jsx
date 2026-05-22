@@ -38,7 +38,7 @@ export default function Navbar() {
           aria-label="Daniel Kolář"
         >
           <span className="font-display text-[2rem] sm:text-xl lg:text-lg xl:text-xl tracking-wide text-slate-100">
-            Daniel <span className="gold-text">Kolář</span>
+            Daniel Kolář
           </span>
           <span className="mt-2 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-300/90">
             Osobní finanční poradce
