@@ -35,10 +35,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <a href="/" className="mb-4 inline-flex flex-col items-start leading-none">
-              <span className="font-display text-base tracking-wide text-white">
+              <span className="font-display text-lg tracking-wide text-white">
                 Daniel Kolář
               </span>
-              <span className="mt-1.5 text-[8px] font-semibold uppercase tracking-[0.22em] text-gold-300/70">
+              <span className="mt-1.5 text-[9px] font-semibold uppercase tracking-[0.22em] text-gold-300/75">
                 Osobní finanční poradce
               </span>
             </a>
