@@ -56,9 +56,11 @@ export default function About() {
 
             <div className="mt-7 space-y-5 text-slate-300/90 leading-relaxed text-[15px] sm:text-base">
               <p>
-                Nechci být poradce na jednu schůzku. Chci být člověk, na kterého
-                se můžete dlouhodobě obracet, když řešíte finance, bydlení,
-                investice nebo důležitá životní rozhodnutí.
+                Finance mají být oporou, která vám dává směr, klid a větší
+                možnosti. Chci být člověk, který vaše finance dlouhodobě vede
+                v&nbsp;souvislostech&nbsp;— aby dávaly smysl nejen ve chvíli,
+                kdy něco řešíte, ale i&nbsp;v době, kdy se váš život postupně
+                mění.
               </p>
               <p>
                 Mým cílem je, abyste se u mě cítili jako v&nbsp;bavlnce. Aby
