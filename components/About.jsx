@@ -42,7 +42,7 @@ export default function About() {
           </div>
 
           {/* Content right */}
-          <div className="order-1 lg:order-2 lg:col-span-7 lg:-translate-y-6 reveal">
+          <div className="order-1 lg:order-2 lg:col-span-7 lg:-mt-12 reveal">
             <div className="inline-flex items-center gap-2 mb-5">
               <span className="h-px w-10 bg-gold-500" />
               <span className="text-xs sm:text-sm tracking-[0.25em] uppercase text-gold-400">
