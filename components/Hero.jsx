@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-[90svh] flex items-center overflow-hidden pt-32 sm:pt-28 pb-12 sm:pb-14 lg:pb-16"
+      className="relative min-h-[90svh] flex items-center overflow-hidden pt-36 sm:pt-28 pb-12 sm:pb-14 lg:pb-16"
     >
       {/* Background layers */}
       <div className="absolute inset-0 bg-navy-950" />
@@ -37,7 +37,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-7 text-base sm:text-lg text-slate-200/90 max-w-xl mx-auto lg:mx-0 leading-relaxed reveal">
-              Pomáhám lidem mít ve financích jasno, správný směr a po boku partnera, který se o ně dlouhodobě stará.
+              Pomáhám lidem mít ve financích jasno, správný směr a jistotu, že se o jejich majetek někdo dlouhodobě stará.
             </p>
 
             <div className="mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center lg:justify-start reveal">
