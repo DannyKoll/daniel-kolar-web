@@ -58,8 +58,8 @@ export default function About() {
               <p>
                 Finance mají být oporou, která vám dává směr, klid a větší
                 možnosti. Chci být člověk, který vaše finance dlouhodobě vede
-                v&nbsp;souvislostech&nbsp;— aby dávaly smysl nejen ve chvíli,
-                kdy něco řešíte, ale i&nbsp;dlouhodobě&nbsp;— v&nbsp;běžném
+                v&nbsp;souvislostech tak, aby dávaly smysl nejen ve chvíli, kdy
+                něco řešíte, ale i&nbsp;dlouhodobě, a&nbsp;to v&nbsp;běžném
                 životě, při změnách i&nbsp;při plánování budoucnosti.
               </p>
               <p>
