@@ -14,9 +14,9 @@ const playfair = Playfair_Display({
   weight: ["400", "500", "600", "700"],
 });
 
-const siteTitle = "Daniel Kolář | Osobní finanční poradce Plzeň";
+const siteTitle = "Daniel Kolář | Finanční poradce a finanční poradenství";
 const siteDescription =
-  "Osobní finanční poradenství v Plzni a okolí. Pomáhám lidem mít ve financích jasno, správný směr a dlouhodobou péči.";
+  "Osobní finanční poradenství, finanční plánování a dlouhodobá péče o finance v souvislostech. Pomáhám lidem mít ve financích jasno, správný směr a větší klid.";
 
 export const metadata = {
   title: siteTitle,
