@@ -11,7 +11,7 @@ const services = [
   {
     icon: Wallet,
     title: "Finanční plán",
-    desc: "Finanční plán dává jednotlivým rozhodnutím směr. Pomáhá udržet přehled v příjmech, výdajích, rezervách, bydlení, ochraně i investicích tak, aby finance nestály vedle sebe náhodně, ale dávaly smysl vůči vašemu životu, cílům a plánům do budoucna.",
+    desc: "Finanční plán dává jednotlivým rozhodnutím směr. Pomáhá udržet přehled v příjmech, výdajích, rezervách, bydlení, ochraně i investicích tak, aby jednotlivé kroky nestály vedle sebe náhodně, ale dávaly smysl vůči vašemu životu, cílům a plánům do budoucna.",
     bullets: ["Přehled a souvislosti", "Jasné priority", "Rozhodnutí, která do sebe zapadají"],
   },
   {
