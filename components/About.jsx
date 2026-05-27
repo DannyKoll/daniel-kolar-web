@@ -57,23 +57,26 @@ export default function About() {
             <div className="mt-7 space-y-5 text-slate-300/90 leading-relaxed text-[15px] sm:text-base">
               <p>
                 Finance mají být oporou, která vám dává směr, klid a větší
-                možnosti. Chci být člověk, který vaše finance dlouhodobě vede
+                možnosti. Chci být člověk, který vám pomáhá dívat se na peníze
                 v&nbsp;souvislostech tak, aby dávaly smysl nejen ve chvíli, kdy
-                něco řešíte, ale i&nbsp;dlouhodobě, a&nbsp;to v&nbsp;běžném
+                něco právě řešíte, ale i&nbsp;dlouhodobě&nbsp;— v&nbsp;běžném
                 životě, při změnách i&nbsp;při plánování budoucnosti.
               </p>
               <p>
                 Mým cílem je, abyste se u mě cítili jako v&nbsp;bavlnce. Aby
-                bylo o&nbsp;vaše finance postaráno, věci měly směr a&nbsp;vy
+                o&nbsp;důležité věci bylo postaráno, měly jasný směr a&nbsp;vy
                 jste na to nebyli sami.
               </p>
               <p className="text-slate-200">
                 Chci vás dobře poznat, porozumět vašim plánům i&nbsp;tomu, co
-                je pro vás důležité, a&nbsp;být pro vás parťákem, který se
-                o&nbsp;vaše finance stará dlouhodobě. Pravidelně se k&nbsp;nim
-                spolu vracíme a&nbsp;já průběžně hlídám, aby věci dávaly smysl
-                i&nbsp;dál. Tak, aby vaše peníze pracovaly hlavně pro
-                vás&nbsp;— a&nbsp;ne vy pořád jen pro ně.
+                je pro vás důležité, a&nbsp;být pro vás parťákem, na kterého se
+                můžete dlouhodobě obracet. Pravidelně se k&nbsp;vašemu
+                nastavení spolu vracíme a&nbsp;já průběžně hlídám, aby
+                jednotlivé kroky dávaly smysl i&nbsp;dál. Tak, aby vaše peníze
+                postupně pracovaly hlavně pro vás, pomáhaly vám tvořit majetek
+                a&nbsp;časem vám dávaly větší klid, možnosti a&nbsp;menší
+                závislost na příjmu z&nbsp;práce&nbsp;— místo toho, aby všechno
+                stálo jen na vaší výplatě.
               </p>
             </div>
 
