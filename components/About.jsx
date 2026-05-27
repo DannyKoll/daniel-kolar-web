@@ -71,12 +71,12 @@ export default function About() {
                 Chci vás dobře poznat, porozumět vašim plánům i&nbsp;tomu, co
                 je pro vás důležité, a&nbsp;být pro vás parťákem, na kterého se
                 můžete dlouhodobě obracet. Pravidelně se k&nbsp;vašemu
-                nastavení spolu vracíme a&nbsp;já průběžně hlídám, aby
-                jednotlivé kroky dávaly smysl i&nbsp;dál. Tak, aby vaše peníze
-                postupně pracovaly hlavně pro vás, pomáhaly vám tvořit majetek
-                a&nbsp;časem vám dávaly větší klid, možnosti a&nbsp;menší
-                závislost na příjmu z&nbsp;práce&nbsp;— místo toho, aby všechno
-                stálo jen na vaší výplatě.
+                nastavení vracíme a&nbsp;já průběžně hlídám, aby jednotlivé
+                kroky dávaly smysl i&nbsp;dál. Tak, aby vaše peníze postupně
+                pracovaly hlavně pro vás, pomáhaly vám tvořit majetek
+                a&nbsp;časem přinášely větší klid, možnosti a&nbsp;menší
+                závislost na příjmu z&nbsp;práce&nbsp;— místo toho, aby
+                všechno stálo jen na vaší výplatě.
               </p>
             </div>
 
