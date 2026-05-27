@@ -56,27 +56,24 @@ export default function About() {
 
             <div className="mt-7 space-y-5 text-slate-300/90 leading-relaxed text-[15px] sm:text-base">
               <p>
-                Finance mají být oporou, která vám dává směr, klid a větší
-                možnosti. Chci být člověk, který vám pomáhá dívat se na peníze
-                v&nbsp;souvislostech tak, aby dávaly smysl nejen ve chvíli, kdy
-                něco právě řešíte, ale i&nbsp;dlouhodobě&nbsp;— v&nbsp;běžném
-                životě, při změnách i&nbsp;při plánování budoucnosti.
+                Peníze nemají být jen něco, co každý měsíc řešíte. Mají vám
+                dávat směr, klid a postupně otevírat větší možnosti. Pomohu vám
+                dát jednotlivá rozhodnutí do souvislostí tak, aby dávala smysl
+                nejen dnes, ale i za několik let&nbsp;— v&nbsp;běžném životě,
+                při změnách i při plánování budoucnosti.
               </p>
               <p>
                 Mým cílem je, abyste se u mě cítili jako v&nbsp;bavlnce. Aby
-                o&nbsp;důležité věci bylo postaráno, měly jasný směr a&nbsp;vy
-                jste na to nebyli sami.
+                důležité kroky měly jasný směr, někdo je s&nbsp;vámi průběžně
+                hlídal a&nbsp;vy jste na to nebyli sami.
               </p>
               <p className="text-slate-200">
                 Chci vás dobře poznat, porozumět vašim plánům i&nbsp;tomu, co
-                je pro vás důležité, a&nbsp;být pro vás parťákem, na kterého se
-                můžete dlouhodobě obracet. Pravidelně se k&nbsp;vašemu
-                nastavení vracíme a&nbsp;já průběžně hlídám, aby jednotlivé
-                kroky dávaly smysl i&nbsp;dál. Tak, aby vaše peníze postupně
-                pracovaly hlavně pro vás, pomáhaly vám tvořit majetek
-                a&nbsp;časem přinášely větší klid, možnosti a&nbsp;menší
-                závislost na příjmu z&nbsp;práce&nbsp;— místo toho, aby
-                všechno stálo jen na vaší výplatě.
+                je pro vás důležité. Společně nastavíme cestu, která vám pomůže
+                chránit příjem, tvořit rezervy, budovat majetek a&nbsp;časem
+                snižovat závislost na příjmu z&nbsp;práce. Ne proto, aby bylo
+                všechno jen „nějak vyřešené“, ale aby vaše peníze postupně
+                pracovaly víc pro vás.
               </p>
             </div>
 
