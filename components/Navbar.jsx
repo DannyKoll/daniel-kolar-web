@@ -99,7 +99,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className="block text-center btn-gold px-5 py-3 rounded-full text-sm font-semibold"
             >
-              Sjednat schůzku
+              Domluvit schůzku
             </a>
           </li>
         </ul>
