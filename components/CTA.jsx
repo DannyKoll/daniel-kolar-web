@@ -57,23 +57,29 @@ export default function CTA() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,rgba(201,169,97,0.08)_0%,transparent_70%)]" />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 lg:mb-24 reveal">
-          <div className="inline-flex items-center gap-2 mb-5">
-            <span className="h-px w-10 bg-gold-500" />
-            <span className="text-xs sm:text-sm tracking-[0.25em] uppercase text-gold-400">
-              Pojďme se potkat
-            </span>
-            <span className="h-px w-10 bg-gold-500" />
+        <div className="mb-10 grid items-end gap-6 text-center reveal sm:mb-12 lg:mb-14 lg:grid-cols-12 lg:gap-10 lg:text-left">
+          <div className="lg:col-span-8">
+            <div className="inline-flex items-center justify-center gap-2 mb-5 lg:justify-start">
+              <span className="h-px w-10 bg-gold-500" />
+              <span className="text-xs sm:text-sm tracking-[0.25em] uppercase text-gold-400">
+                Nezávazná konzultace
+              </span>
+              <span className="h-px w-10 bg-gold-500" />
+            </div>
+
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-[2.2rem] xl:text-[2.55rem] text-white leading-tight">
+              Vašim penězům dáme{" "}
+              <span className="gold-text">jasný směr</span>
+            </h2>
           </div>
 
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
-            Pojďme dát vašim penězům <span className="gold-text">jasný směr</span>
-          </h2>
-
-          <p className="mt-5 text-base sm:text-lg text-slate-300/90">
-            První konzultace je vždy nezávazná a zdarma. Stačí napsat — ozvu se vám
-            do 24 hodin.
-          </p>
+          <div className="lg:col-span-4">
+            <p className="mx-auto max-w-xl text-base text-slate-300/90 lg:mx-0 lg:pb-1">
+              První konzultace je vždy nezávazná a zdarma. Stačí napsat — ozvu
+              se vám do 24 hodin.
+            </p>
+            <div className="mt-5 hidden h-px w-full bg-gradient-to-r from-gold-500/35 to-transparent lg:block" />
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
