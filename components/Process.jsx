@@ -19,7 +19,7 @@ const steps = [
   {
     icon: Compass,
     title: "Plán na míru",
-    desc: "Připravím vám plán, který odpovídá vám, vašemu životu a tomu, co od peněz očekáváte. Ukážu vám, jak z nich získat maximum.",
+    desc: "Připravím vám plán, který odpovídá vám, vašemu životu a tomu, co od peněz očekáváte. Ukážu vám, jak jednotlivé kroky propojit tak, aby dávaly smysl jako celek.",
   },
   {
     icon: HeartHandshake,
