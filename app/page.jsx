@@ -8,6 +8,12 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 
+export const metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
+
 export default function Home() {
   return (
     <main className="relative">
