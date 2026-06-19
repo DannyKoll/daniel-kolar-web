@@ -19,6 +19,7 @@ const siteDescription =
   "Osobní finanční poradenství, finanční plánování a dlouhodobá péče o finance v souvislostech. Pomáhám lidem mít ve financích jasno, správný směr a větší klid.";
 
 export const metadata = {
+  metadataBase: new URL("https://danielkolar.cz"),
   title: siteTitle,
   description: siteDescription,
   keywords: [
@@ -33,6 +34,8 @@ export const metadata = {
   openGraph: {
     title: siteTitle,
     description: siteDescription,
+    url: "https://danielkolar.cz",
+    siteName: "Daniel Kolář",
     locale: "cs_CZ",
     type: "website",
   },
