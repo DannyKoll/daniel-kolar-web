@@ -4,6 +4,9 @@ export const metadata = {
   title: "Zpracování osobních údajů | Daniel Kolář",
   description:
     "Informace o zpracování osobních údajů návštěvníků webu a osob, které odešlou kontaktní formulář.",
+  alternates: {
+    canonical: "/zpracovani-osobnich-udaju",
+  },
 };
 
 const sections = [
