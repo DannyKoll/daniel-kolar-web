@@ -4,6 +4,9 @@ export const metadata = {
   title: "Cookies | Daniel Kolář",
   description:
     "Informace o používání cookies na webu Daniela Koláře.",
+  alternates: {
+    canonical: "/cookies",
+  },
 };
 
 const sections = [
