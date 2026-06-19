@@ -19,6 +19,9 @@ export const metadata = {
   title: "Investice | Daniel Kolář",
   description:
     "Investiční poradenství na míru. Portfolio podle cíle, horizontu, rezervy a vztahu k riziku.",
+  alternates: {
+    canonical: "/investice",
+  },
 };
 
 const pillars = [
