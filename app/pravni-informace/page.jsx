@@ -4,6 +4,9 @@ export const metadata = {
   title: "Právní informace | Daniel Kolář",
   description:
     "Základní právní informace k finančním službám prezentovaným na tomto webu.",
+  alternates: {
+    canonical: "/pravni-informace",
+  },
 };
 
 const sections = [
