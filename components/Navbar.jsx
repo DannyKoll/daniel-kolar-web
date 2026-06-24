@@ -1,11 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, PlayCircle, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const links = [
   { href: "#o-mne", label: "O mně" },
   { href: "#sluzby", label: "Služby" },
+  { href: "/finance-jako-celek", label: "Finance jako celek", featured: true },
   { href: "#proces", label: "Jak pracuji" },
   { href: "#kontakt", label: "Kontakt" },
 ];
@@ -15,6 +16,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const sectionHref = (href) => (pathname === "/" ? href : `/${href}`);
+  const linkHref = (href) => (href.startsWith("/") ? href : sectionHref(href));
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -49,9 +51,20 @@ export default function Navbar() {
           {links.map((l) => (
             <li key={l.href}>
               <a
-                href={sectionHref(l.href)}
-                className="relative py-2 hover:text-gold-300 transition-colors group"
+                href={linkHref(l.href)}
+                className={`relative inline-flex items-center gap-1.5 py-2 transition-colors group ${
+                  l.featured
+                    ? "text-gold-300 hover:text-gold-200"
+                    : "hover:text-gold-300"
+                }`}
               >
+                {l.featured && (
+                  <PlayCircle
+                    size={15}
+                    strokeWidth={1.8}
+                    className="text-gold-400/85"
+                  />
+                )}
                 {l.label}
                 <span className="absolute left-0 -bottom-0.5 h-px w-0 bg-gold-500 transition-all group-hover:w-full" />
               </a>
@@ -85,9 +98,11 @@ export default function Navbar() {
           {links.map((l) => (
             <li key={l.href}>
               <a
-                href={sectionHref(l.href)}
+                href={linkHref(l.href)}
                 onClick={() => setOpen(false)}
-                className="block px-3 py-3 text-slate-200 hover:text-gold-300 hover:bg-gold-500/5 rounded-lg transition-colors"
+                className={`block px-3 py-3 hover:text-gold-300 hover:bg-gold-500/5 rounded-lg transition-colors ${
+                  l.featured ? "text-gold-200" : "text-slate-200"
+                }`}
               >
                 {l.label}
               </a>
