@@ -9,22 +9,22 @@ const steps = [
   {
     icon: Coffee,
     title: "Nezávazné setkání",
-    desc: "Nejdřív mě zajímáte vy — vaše zkušenosti, plány a to, co je pro vás ve financích důležité. A pokud přicházíte s konkrétní otázkou, začneme právě u ní.",
+    desc: "Nejdřív chci pochopit vás — co je pro vás důležité, jaké máte plány a co vám mají peníze v životě přinášet. Nemusíte mít konkrétní problém ani připravené otázky.",
   },
   {
     icon: Search,
     title: "Širší pohled",
-    desc: "Podíváme se na vaše finance v souvislostech, aby dávaly smysl vůči vašemu životu, cílům i tomu, kam se chcete posunout.",
+    desc: "Podíváme se na vaše finance v souvislostech — podle toho, co je pro vás důležité, jaké máte cíle a kam se chcete posunout.",
   },
   {
     icon: Compass,
     title: "Plán na míru",
-    desc: "Připravím vám plán, který odpovídá vám, vašemu životu a tomu, co od peněz očekáváte. Ukážu vám, jak jednotlivé kroky propojit tak, aby dávaly smysl jako celek.",
+    desc: "Připravím návrh dalších kroků, ukážu možné varianty a pomohu vám vybrat cestu, která odpovídá vašim prioritám.",
   },
   {
     icon: HeartHandshake,
     title: "Dlouhodobá péče",
-    desc: "Pomohu vám projít konkrétními kroky a budu s vámi průběžně sledovat změny, aby vaše finance dál dávaly smysl v souvislostech.",
+    desc: "K nastavení se pravidelně vracíme a upravujeme ho podle změn v životě, na trhu nebo ve vašich cílech, aby vám finance dál sloužily.",
   },
 ];
 
