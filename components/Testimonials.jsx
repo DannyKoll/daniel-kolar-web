@@ -6,74 +6,66 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 const testimonials = [
   {
     text: [
-      "Na první schůzku jsem šel hlavně ze zvědavosti. Neměl jsem pocit, že mám ve financích nějaký problém. Výplata chodila, něco jsem si odkládal a pár věcí už jsem měl nějak nastavených.",
-      "Na schůzce mi ale došlo, že finance nejsou jen o řešení problémů. Spíš o tom, jestli dávají směr a jestli jednotlivé věci zapadají do sebe. Něco jsme nechali, něco upravili a hlavně jsem si poprvé udělal větší obrázek.",
-      "Dnes spolupracujeme s Danielem už několik let a zpětně jsem rád, že jsem tehdy přišel.",
+      "Na první schůzku jsem šel spíš ze zvědavosti. Neměl jsem pocit, že mám ve financích nějaký velký problém. Něco jsem si odkládal, pár věcí už jsem měl nastavených a bral jsem to tak, že je to asi v pořádku.",
+      "U pana Koláře jsem ocenil hlavně lidský přístup, profesionalitu a to, že mi věci vysvětlil jednoduše. Po schůzce mi došlo, že vlastně nemám úplně jasno, proč mám některé věci nastavené právě takhle. Něco jsme nechali, něco upravili a hlavně jsem v tom konečně získal větší přehled.",
     ],
-    author: "Ondřej Marek",
+    author: "Martin Šimek",
     context: "Dlouhodobá spolupráce",
   },
   {
     text: [
-      "Finančního poradce jsem už měl, takže jsem upřímně nečekal, že mi schůzka s Danielem přinese něco zásadního.",
-      "Rozdíl byl v tom, že jsme se nedívali jen na jednotlivé věci zvlášť. Prošli jsme příjem, bydlení, rezervy, investice i plány do budoucna. Najednou jsem viděl finance v souvislostech.",
-      "Něco zůstalo tak, jak bylo, něco jsme změnili, ale hlavně jsem konečně pochopil, proč to tak dává smysl.",
+      "Finančního poradce jsem už měl, takže jsem od schůzky nečekal nic zásadního. Daniel se ale neptal jen na jednu konkrétní věc. Prošli jsme bydlení, rezervu, investice i to, co chci řešit do budoucna.",
+      "Najednou jsem viděl, že některé věci spolu souvisí víc, než jsem si myslel. Něco zůstalo tak, jak bylo, něco jsme změnili, ale poprvé jsem měl pocit, že vím proč.",
     ],
-    author: "Jan Konečný",
+    author: "Petr Vondrák",
     context: "Finance v souvislostech",
   },
   {
     text: [
-      "S panem Kolářem jsme řešili hypotéku na byt a nejvíc jsme ocenili jeho klidný přístup. Všechno nám vysvětlil normálně, bez složitých řečí, takže jsme se v tom dokázali zorientovat.",
-      "Neřešili jsme jen sazbu. Bavili jsme se i o tom, jaká splátka je pro nás bezpečná, kolik si nechat bokem jako rezervu a co může dávat smysl do budoucna.",
-      "Díky tomu jsme neměli pocit, že jen procházíme nějakým procesem. Věděli jsme, proč se rozhodujeme právě takhle.",
+      "Mysleli jsme, že u hypotéky půjde hlavně o sazbu. U pana Koláře jsme ocenili hlavně klid, srozumitelné vysvětlení a to, že na nás netlačil. Prošli jsme spolu i splátku, rezervu po nastěhování a co by se stalo, kdyby se nám změnil příjem.",
+      "Díky tomu jsme se nerozhodovali jen podle nejlevnější nabídky, ale podle toho, co zvládneme dlouhodobě a s větším klidem.",
     ],
-    author: "Jana a Michal",
+    author: "Eva a Tomáš Hrubí",
     context: "Financování bydlení",
   },
   {
     text: [
-      "Původně jsem měl jasno. Chtěl jsem hypotéku splatit co nejdřív a měl jsem pocit, že čím rychleji se jí zbavím, tím líp.",
-      "Pak jsme ale s Danielem prošli čísla, různé varianty a jejich dopad do budoucna. Ukázalo se, že někdy může dávat větší smysl hypotéku rozumně splácet a zároveň vedle ní postupně budovat majetek.",
-      "Nakonec jsem se nerozhodoval jen podle pocitu, ale podle konkrétních čísel a plánu.",
+      "Chtěl jsem hypotéku splatit co nejrychleji. Měl jsem pocit, že čím dřív bude pryč, tím líp.",
+      "Daniel mi ale ukázal čísla i druhou variantu — neposílat všechno navíc jen do hypotéky a část peněz dál odkládat. Nakonec jsem se rozhodoval podle propočtu, ne jen podle pocitu.",
     ],
-    author: "Aleš Havel",
+    author: "David Kříž",
     context: "Hypotéka a budování majetku",
   },
   {
     text: [
-      "O rentě jsem dřív přemýšlela spíš obecně. Bylo by hezké mít jednou víc volnosti, ale nikdy jsem nevěděla, co si pod tím konkrétně představit.",
-      "Na schůzce jsme to poprvé dali do čísel. Řekli jsme si, jaký příjem bych jednou chtěla mít, kolik kapitálu by k tomu bylo potřeba a jak se k tomu můžu postupně přibližovat.",
-      "Najednou to nebylo jen přání do budoucna, ale něco, co se dá začít řešit konkrétními kroky už dnes.",
+      "O rentě jsem dřív přemýšlela spíš obecně. Líbila se mi představa mít jednou víc volnosti, ale vůbec jsem nevěděla, kolik peněz by k tomu bylo potřeba.",
+      "Na schůzce jsme to poprvé dali do čísel. Najednou jsem věděla, jaký příjem bych jednou chtěla mít, kolik kapitálu by k tomu bylo potřeba a co pro to můžu začít dělat už dnes.",
     ],
-    author: "Barbora Křížová",
+    author: "Lenka Dvořáková",
     context: "Renta a finanční svoboda",
   },
   {
     text: [
-      "S manželem jsme chtěli hlavně vědět, jestli naše finance dávají smysl i do budoucna. Máme děti, hypotéku, běžné výdaje a zároveň jsme nechtěli být celý život úplně závislí jen na příjmu ze zaměstnání.",
-      "Náš poradce nám pomohl dát věci dohromady tak, aby na sebe navazovaly. Řešili jsme rezervy, bydlení, ochranu příjmu i dlouhodobé odkládání peněz.",
-      "Líbilo se nám, že nám nic nemaloval narůžovo. Spíš nám ukázal realistickou cestu a díky tomu máme větší klid.",
+      "Chtěli jsme hlavně vědět, jestli máme finance nastavené rozumně i do budoucna. Máme děti, hypotéku, běžné výdaje a nechtěli jsme jen doufat, že to nějak vyjde.",
+      "Daniel nám ukázal, co řešit hned, co může počkat a kde jsou největší rizika. Líbilo se nám, že nám neříkal jen hezké věci, ale ukázal i realistický pohled.",
     ],
-    author: "Klára a Lukáš Benešovi",
+    author: "Martina a Lukáš Černí",
     context: "Rodinné finance",
   },
   {
     text: [
-      "Dřív jsem u investic řešila hlavně výnos. Kde to vydělá víc, co je teď zajímavé a jestli mi někde neutíká příležitost.",
-      "Daniel se mě ale nejdřív zeptal na jednodušší věc: k čemu ty peníze vlastně mají sloužit a kdy je budu potřebovat. Až podle toho jsme řešili, jak investice nastavit.",
-      "Dnes pro mě investice nejsou jen číslo v aplikaci. Beru je jako součást většího plánu.",
+      "U investic jsem dřív řešila hlavně to, kde to víc vydělá. Daniel se mě ale nejdřív zeptal, kdy ty peníze budu potřebovat a na co.",
+      "To mi dost změnilo pohled. Nehoním už každou příležitost a víc řeším, jestli investice odpovídají tomu, co s těmi penězi plánuju.",
     ],
-    author: "Nikola Vávrová",
+    author: "Veronika Tichá",
     context: "Investice",
   },
   {
     text: [
-      "Nejvíc si vážím toho, že finance spolu neřešíme jednorázově. Když se mi změnila práce a později jsme začali řešit bydlení, znovu jsme prošli celý plán a upravili ho podle nové situace.",
-      "Nemám pocit, že se ozvu jen ve chvíli, kdy je potřeba něco vyřešit. Spíš vím, že mám vedle sebe člověka, který zná moji situaci a pomáhá mi držet směr dlouhodobě.",
-      "To je pro mě na spolupráci největší hodnota.",
+      "Nejvíc oceňuji, že spolu finance neřešíme jednorázově. Když se mi změnila práce a později jsme začali řešit bydlení, nemuseli jsme začínat od nuly.",
+      "Vrátili jsme se k tomu, co už bylo nastavené, a upravili to podle nové situace. Mám díky tomu pocit, že se mám na koho obrátit i ve chvíli, kdy se něco změní.",
     ],
-    author: "Lucie M.",
+    author: "Lucie Kadlecová",
     context: "Průběžná péče",
   },
 ];
