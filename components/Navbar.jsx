@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Menu, PlayCircle, X } from "lucide-react";
+import { Menu as MenuIcon, PlayCircle, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const links = [
@@ -81,10 +81,13 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="lg:hidden text-slate-200 p-2"
+          className="lg:hidden inline-flex items-center gap-2 text-slate-200 p-2"
           aria-label="Otevřít menu"
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          <span className="text-sm font-medium uppercase tracking-[0.16em] text-slate-200/90">
+            MENU
+          </span>
+          {open ? <X size={22} /> : <MenuIcon size={22} />}
         </button>
       </nav>
 
@@ -94,16 +97,7 @@ export default function Navbar() {
           open ? "max-h-96" : "max-h-0"
         }`}
       >
-        <div className="px-5 pt-4">
-          <div className="flex items-center gap-3 px-3 pb-2">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-200/80">
-              Menu
-            </span>
-            <span className="h-px flex-1 bg-slate-200/10" />
-          </div>
-        </div>
-
-        <ul className="px-5 pb-4 pt-1 flex flex-col gap-1">
+        <ul className="px-5 py-4 flex flex-col gap-1">
           {links.map((l) => (
             <li key={l.href}>
               <a
