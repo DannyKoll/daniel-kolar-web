@@ -11,37 +11,37 @@ const services = [
   {
     icon: Wallet,
     title: "Finanční plán",
-    desc: "Finanční plán dává jednotlivým rozhodnutím směr. Pomáhá udržet přehled v příjmech, výdajích, rezervách, bydlení, ochraně i investicích tak, aby jednotlivé kroky nestály vedle sebe náhodně, ale dávaly smysl vůči vašemu životu, cílům a plánům do budoucna.",
-    bullets: ["Přehled a souvislosti", "Jasné priority", "Rozhodnutí, která do sebe zapadají"],
+    desc: "Finanční plán dá vašim rozhodnutím jasný směr. Projdeme příjmy, výdaje, rezervy, bydlení, ochranu i investice tak, aby jednotlivé kroky nestály vedle sebe náhodně, ale navazovaly na vaše cíle.",
+    bullets: ["Přehled a priority", "Rozhodnutí v souvislostech", "Plán pro další kroky"],
   },
   {
     icon: TrendingUp,
     title: "Tvorba rezervy a majetku",
-    desc: "Peníze mají mít různé role. Něco má být po ruce, něco má sloužit na cíle v příštích letech a něco má dlouhodobě růst. Pomohu vám nastavit systém, ve kterém máte rezervu, plán i prostor pro budování majetku.",
+    desc: "Peníze mají mít různé role. Něco má být po ruce, něco má sloužit na cíle v příštích letech a něco má dlouhodobě růst. Pomohu vám nastavit systém, ve kterém každá část ví, k čemu slouží.",
     bullets: ["Rezerva po ruce", "Peníze na střednědobé cíle", "Dlouhodobé budování majetku"],
   },
   {
     icon: Shield,
     title: "Ochrana příjmu a rodiny",
-    desc: "Dobře nastavená ochrana má držet váš život pohromadě i ve chvíli, kdy přijde nemoc, úraz nebo výpadek příjmu. Cílem není platit co nejvíc, ale chránit to, co by vás a vaši rodinu opravdu mohlo finančně rozhodit.",
-    bullets: ["Příjem domácnosti", "Rodina a závazky", "Majetek a odpovědnost"],
+    desc: "Dobře nastavená ochrana má držet domácnost pohromadě ve chvíli, kdy přijde nemoc, úraz nebo výpadek příjmu. Cílem není platit co nejvíc, ale chránit to, co by vás opravdu finančně rozhodilo.",
+    bullets: ["Výpadek příjmu", "Rodina a závazky", "Majetek a odpovědnost"],
   },
   {
     icon: Home,
     title: "Financování bydlení",
-    desc: "Bydlení není jen hypotéka a splátka. Důležité je vědět, kolik je bezpečné si půjčit, jak úvěr zapadne do rozpočtu a jak s ním pracovat do budoucna. Cílem není hypotéku jen získat, ale nastavit ji tak, aby vás zbytečně nebrzdila — a ideálně jste se jí mohli zbavit dřív.",
+    desc: "Bydlení není jen hypotéka a sazba. Důležité je vědět, kolik je bezpečné si půjčit, jak splátka zapadne do rozpočtu a jak s úvěrem pracovat do budoucna.",
     bullets: ["Bezpečná výše splátky", "Rezerva kolem bydlení", "Cesta k dřívějšímu splacení"],
   },
   {
     icon: PiggyBank,
     title: "Renta a finanční svoboda",
-    desc: "Dlouhodobě nastavujeme finance tak, aby jednou část vašich příjmů nestála jen na aktivní práci. Cílem je postupně budovat majetek, který vám v budoucnu dá větší klid, více možností a menší závislost na práci.",
+    desc: "Dlouhodobě nastavujeme finance tak, aby část vašich budoucích příjmů nemusela stát jen na aktivní práci. Cílem je postupně budovat majetek, který vám dá více možností a větší volnost.",
     bullets: ["Dlouhý horizont", "Pravidelné investování", "Budoucí příjem z majetku"],
   },
   {
     icon: RefreshCw,
     title: "Dlouhodobá péče",
-    desc: "Když s klientem navážu spolupráci, beru ji dlouhodobě. Chci vás doprovázet k vašim cílům, pravidelně se vracet k tomu, co už máte nastavené, a hlídat, abyste zbytečně neplatili víc, než je nutné — například kvůli zdražujícím smlouvám nebo změnám ze strany institucí.",
+    desc: "Finance se mění spolu s vaším životem. Proto se k nastavení pravidelně vracíme, kontrolujeme změny a upravujeme plán tak, aby vám dál sloužil.",
     bullets: ["Dlouhodobá spolupráce", "Pravidelné kontroly nastavení", "Hlídání zbytečných nákladů"],
   },
 ];
@@ -73,10 +73,9 @@ export default function Services() {
           </h2>
 
           <p className="mt-5 text-base sm:text-lg text-slate-300/90">
-            Nejde o to mít několik smluv vedle sebe. Důležité je, aby rezerva,
-            bydlení, ochrana příjmu, investice i budoucí renta dávaly smysl
-            společně — vzhledem k vašemu životu, cílům a tomu, co se může v
-            čase měnit.
+            Nejde o to řešit jednotlivé oblasti financí odděleně. Důležité je,
+            aby rezerva, bydlení, ochrana příjmu, investice i budoucí renta
+            navazovaly na váš život, cíle a možnosti.
           </p>
         </div>
 
@@ -94,11 +93,11 @@ export default function Services() {
 function ServiceCard({ icon: Icon, title, desc, bullets, delay }) {
   return (
     <article
-      className="service-card group relative overflow-hidden rounded-2xl p-7 sm:p-8 reveal"
+      className="service-card group relative overflow-hidden rounded-2xl p-6 sm:p-7 reveal"
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="relative mb-6 flex items-center justify-between gap-4">
-        <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-gold-500/25 bg-gold-500/[0.08] shadow-[0_16px_40px_-28px_rgba(201,169,97,0.9)]">
+      <div className="relative mb-5 flex items-center justify-between gap-4">
+        <div className="inline-flex h-[52px] w-[52px] items-center justify-center rounded-2xl border border-gold-500/25 bg-gold-500/[0.08] shadow-[0_16px_40px_-28px_rgba(201,169,97,0.9)]">
           <Icon size={25} className="text-gold-300" />
         </div>
         <span className="h-px flex-1 bg-gradient-to-r from-gold-500/25 to-transparent" />
@@ -112,7 +111,7 @@ function ServiceCard({ icon: Icon, title, desc, bullets, delay }) {
         {desc}
       </p>
 
-      <ul className="mt-5 grid gap-2">
+      <ul className="mt-4 grid gap-2">
         {bullets.map((b) => (
           <li
             key={b}
