@@ -94,7 +94,16 @@ export default function Navbar() {
           open ? "max-h-96" : "max-h-0"
         }`}
       >
-        <ul className="px-5 py-4 flex flex-col gap-1">
+        <div className="px-5 pt-4">
+          <div className="flex items-center gap-3 px-3 pb-2">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-200/80">
+              Menu
+            </span>
+            <span className="h-px flex-1 bg-slate-200/10" />
+          </div>
+        </div>
+
+        <ul className="px-5 pb-4 pt-1 flex flex-col gap-1">
           {links.map((l) => (
             <li key={l.href}>
               <a
