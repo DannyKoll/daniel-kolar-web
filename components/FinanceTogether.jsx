@@ -126,8 +126,8 @@ export default function FinanceTogether() {
             </div>
 
             <p className="mt-3 max-w-md text-sm leading-relaxed text-slate-400">
-              Na další stránce najdete vysvětlení a konkrétní příklady, jak do
-              sebe zapadá hypotéka, rezerva, pojištění, investice a renta.
+              Na další stránce najdete krátké vysvětlení a konkrétní příklady,
+              jak do sebe jednotlivé části financí zapadají.
             </p>
 
             <div className="mt-7 h-px w-full max-w-sm bg-gradient-to-r from-gold-500/35 to-transparent" />
