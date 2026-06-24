@@ -117,13 +117,18 @@ export default function FinanceTogether() {
                 href="/finance-jako-celek"
                 className="group inline-flex items-center justify-center gap-2 rounded-full border border-gold-500/45 bg-gold-500/10 px-5 py-3 text-sm font-semibold text-gold-100 shadow-[0_18px_42px_-30px_rgba(201,169,97,0.9)] transition-all hover:-translate-y-0.5 hover:border-gold-400/80 hover:bg-gold-500/16 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950 sm:px-6"
               >
-                Jak fungují finance jako celek
+                Krátké video: co vám to přinese
                 <ArrowRight
                   size={17}
                   className="transition-transform group-hover:translate-x-1"
                 />
               </Link>
             </div>
+
+            <p className="mt-3 max-w-md text-sm leading-relaxed text-slate-400">
+              Na další stránce najdete vysvětlení a konkrétní příklady, jak do
+              sebe zapadá hypotéka, rezerva, pojištění, investice a renta.
+            </p>
 
             <div className="mt-7 h-px w-full max-w-sm bg-gradient-to-r from-gold-500/35 to-transparent" />
           </div>
