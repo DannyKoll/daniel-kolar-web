@@ -106,10 +106,11 @@ export default function FinanceTogether() {
             </div>
 
             <p className="max-w-xl text-base sm:text-lg text-slate-300/90 leading-relaxed">
-              Když každá část financí stojí zvlášť, rozhodnutí se snadno
-              rozcházejí. Hypotéka, rezerva, pojištění, investice i renta by na
-              sebe měly navazovat. Díky tomu vzniká plán, který dává smysl
-              dnes, za pár let i ve chvíli, kdy se život změní.
+              Jsem zastáncem toho, aby finance fungovaly jako jeden celek.
+              Hypotéka, rezerva, pojištění, investice i renta by neměly stát
+              vedle sebe náhodně, ale navazovat na váš život, cíle a možnosti.
+              Díky tomu se z jednotlivých rozhodnutí stává plán, který vám
+              pomáhá dnes, za pár let i ve chvíli, kdy se něco změní.
             </p>
 
             <div className="mt-7 flex">
