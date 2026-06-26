@@ -241,7 +241,7 @@ function VideoFrame() {
       <div className="absolute -inset-3 rotate-[-1.2deg] rounded-[2rem] border border-gold-500/24" />
       <div className="relative aspect-video overflow-hidden rounded-[1.6rem] border border-gold-500/24 bg-navy-950/80 shadow-card backdrop-blur-md">
         <iframe
-          src="https://player.vimeo.com/video/1204105127?badge=0&autopause=0&player_id=0&app_id=58479"
+          src="https://player.vimeo.com/video/1204824172?badge=0&autopause=0&player_id=0&app_id=58479"
           title="Finance jako celek"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
