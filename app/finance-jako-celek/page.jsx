@@ -70,7 +70,7 @@ export default function FinanceAsWholePage() {
 
       <section
         id="top"
-        className="relative overflow-hidden pt-28 pb-10 sm:pt-32 sm:pb-12 lg:pt-36 lg:pb-14"
+        className="relative overflow-hidden pt-28 pb-8 sm:pt-32 sm:pb-8 lg:pt-36 lg:pb-8"
       >
         <div className="absolute inset-0 bg-navy-950" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_88%_64%_at_50%_0%,rgba(30,68,110,0.88)_0%,rgba(12,35,64,0.82)_44%,rgba(7,23,43,1)_78%)]" />
@@ -128,7 +128,7 @@ export default function FinanceAsWholePage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-14 sm:py-16 lg:py-20">
+      <section className="relative overflow-hidden pt-10 pb-14 sm:pt-12 sm:pb-16 lg:pt-12 lg:pb-20">
         <div className="absolute inset-0 bg-gradient-to-b from-navy-950 via-navy-900/95 to-navy-950" />
         <div className="absolute right-0 top-1/4 h-[460px] w-[460px] rounded-full bg-gold-500/[0.04] blur-3xl" />
 
