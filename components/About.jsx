@@ -43,6 +43,13 @@ export default function About() {
 
           {/* Content right */}
           <div className="order-1 lg:order-2 lg:col-span-7 lg:-mt-12 reveal">
+            <div className="mb-5 inline-flex items-center gap-2 lg:hidden">
+              <span className="h-px w-10 bg-gold-500" />
+              <span className="text-xs tracking-[0.25em] uppercase text-gold-400">
+                Můj přístup
+              </span>
+            </div>
+
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
               Co pro vás <span className="gold-text">mohu udělat</span>
             </h2>
@@ -105,7 +112,7 @@ export default function About() {
                   href="/finance-jako-celek#video"
                   className="group mt-2 inline-flex items-center gap-1.5 font-medium text-gold-300 transition-colors hover:text-gold-200"
                 >
-                  Jak přemýšlím o financích
+                  Pustit krátké video
                   <span className="inline-block transition-transform group-hover:translate-x-1">
                     →
                   </span>
