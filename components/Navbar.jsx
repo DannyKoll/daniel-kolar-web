@@ -103,10 +103,17 @@ export default function Navbar() {
               <a
                 href={linkHref(l.href)}
                 onClick={() => setOpen(false)}
-                className={`block px-3 py-3 hover:text-gold-300 hover:bg-gold-500/5 rounded-lg transition-colors ${
+                className={`flex items-center gap-2 px-3 py-3 hover:text-gold-300 hover:bg-gold-500/5 rounded-lg transition-colors ${
                   l.featured ? "text-gold-200" : "text-slate-200"
                 }`}
               >
+                {l.featured && (
+                  <PlayCircle
+                    size={16}
+                    strokeWidth={1.8}
+                    className="text-gold-400/85"
+                  />
+                )}
                 {l.label}
               </a>
             </li>
