@@ -88,12 +88,6 @@ export default function FinanceAsWholePage() {
           </Link>
 
           <div className="mx-auto max-w-4xl text-center">
-            <div className="reveal mb-6 inline-flex items-center gap-2 rounded-full border border-gold-500/20 bg-gold-500/5 px-4 py-2 backdrop-blur-sm">
-              <span className="text-xs uppercase tracking-[0.25em] text-gold-200">
-                Finance jako celek
-              </span>
-            </div>
-
             <h1 className="reveal font-display text-4xl leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Finance jako celek{" "}
               <span className="gold-text">v praxi</span>
