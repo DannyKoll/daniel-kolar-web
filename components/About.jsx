@@ -54,7 +54,7 @@ export default function About() {
               Co pro vás <span className="gold-text">mohu udělat</span>
             </h2>
 
-            <div className="mt-7 space-y-5 text-slate-300/90 leading-relaxed text-[15px] sm:text-base">
+            <div className="mt-7 space-y-7 text-slate-300/90 leading-relaxed text-[15px] sm:space-y-5 sm:text-base">
               <p>
                 Peníze nemají být jen něco, co každý měsíc řešíte. Mají vám
                 dávat směr, klid a postupně otevírat větší možnosti. Pomohu vám
