@@ -43,13 +43,6 @@ export default function About() {
 
           {/* Content right */}
           <div className="order-1 lg:order-2 lg:col-span-7 lg:-mt-12 reveal">
-            <div className="inline-flex items-center gap-2 mb-5">
-              <span className="h-px w-10 bg-gold-500" />
-              <span className="text-xs sm:text-sm tracking-[0.25em] uppercase text-gold-400">
-                Můj přístup
-              </span>
-            </div>
-
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
               Co pro vás <span className="gold-text">mohu udělat</span>
             </h2>
