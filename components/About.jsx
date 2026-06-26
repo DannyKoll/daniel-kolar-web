@@ -103,6 +103,21 @@ export default function About() {
                   →
                 </span>
               </a>
+
+              <div className="mt-4 max-w-md text-sm leading-relaxed text-slate-400">
+                <p>
+                  Než si domluvíme schůzku, můžete mě nejdřív poznat ve videu.
+                </p>
+                <a
+                  href="/finance-jako-celek#video"
+                  className="group mt-2 inline-flex items-center gap-1.5 font-medium text-gold-300 transition-colors hover:text-gold-200"
+                >
+                  Jak přemýšlím o financích
+                  <span className="inline-block transition-transform group-hover:translate-x-1">
+                    →
+                  </span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
