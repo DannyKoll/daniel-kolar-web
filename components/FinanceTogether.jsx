@@ -107,10 +107,9 @@ export default function FinanceTogether() {
 
             <p className="max-w-xl text-base sm:text-lg text-slate-300/90 leading-relaxed">
               Jsem zastáncem toho, aby finance fungovaly jako jeden celek.
-              Hypotéka, rezerva, pojištění, investice i renta by neměly stát
-              vedle sebe náhodně, ale navazovat na váš život, cíle a možnosti.
-              Díky tomu se z jednotlivých rozhodnutí stává plán, který vám
-              pomáhá dnes, za pár let i ve chvíli, kdy se něco změní.
+              Hypotéka, rezerva, pojištění, investice i renta by na sebe měly
+              navazovat podle vašeho života a cílů. Z jednotlivých rozhodnutí
+              pak vzniká plán, který dává smysl dnes i do budoucna.
             </p>
 
             <div className="mt-7 flex">
@@ -125,11 +124,6 @@ export default function FinanceTogether() {
                 />
               </Link>
             </div>
-
-            <p className="mt-3 max-w-md text-sm leading-relaxed text-slate-400">
-              Na další stránce najdete krátké vysvětlení a konkrétní příklady,
-              jak do sebe jednotlivé části financí zapadají.
-            </p>
 
             <div className="mt-7 h-px w-full max-w-sm bg-gradient-to-r from-gold-500/35 to-transparent" />
           </div>
