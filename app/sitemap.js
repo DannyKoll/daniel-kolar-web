@@ -2,6 +2,7 @@ const baseUrl = "https://danielkolar.cz";
 
 const routes = [
   "/",
+  "/financni-rentgen",
   "/finance-jako-celek",
   "/investice",
   "/pravni-informace",
