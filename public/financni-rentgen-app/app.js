@@ -537,7 +537,7 @@ function renderResult() {
             <button class="btn primary" data-action="open-contact">Chci krátký komentář k výsledku</button>
             <div class="advisor-profile">
               <div class="advisor-avatar">
-                <img src="/daniel.jpg" alt="Daniel Kolář" loading="lazy" />
+                <img src="/Foto-3.jpg" alt="Daniel Kolář" loading="lazy" />
               </div>
               <div class="advisor-profile-copy">
                 <span>Kdo se na výsledek podívá?</span>

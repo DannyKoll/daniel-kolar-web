@@ -870,6 +870,7 @@ h3 {
   aspect-ratio: 1;
   border-radius: 50%;
   padding: 4px;
+  overflow: hidden;
   background: #fff;
   box-shadow:
     0 0 0 1px rgba(223, 230, 238, 0.95),
@@ -883,6 +884,8 @@ h3 {
   border-radius: inherit;
   object-fit: cover;
   object-position: center 18%;
+  transform: scale(1.33);
+  transform-origin: center 18%;
 }
 
 .advisor-profile span:not(.advisor-link) {
