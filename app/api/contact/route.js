@@ -52,17 +52,25 @@ export async function POST(request) {
   const name = limit(clean(body.name), 120);
   const phone = limit(clean(body.phone), 40);
   const email = limit(clean(body.email), 160);
-  const message = limit(clean(body.message), 2000);
+  const message = limit(clean(body.message), 4000);
+  const source = limit(clean(body.source), 80);
+  const topic = limit(clean(body.topic), 160);
+  const advisorContext = limit(clean(body.advisorContext), 6000);
   const consent = Boolean(body.consent);
   const website = clean(body.website);
+  const isRentgen = source === "financni-rentgen";
 
   if (website) {
     return NextResponse.json({ ok: true });
   }
 
-  if (!name || !email || !consent || !isEmail(email)) {
+  if ((!isRentgen && !name) || !email || !consent || !isEmail(email)) {
     return NextResponse.json(
-      { message: "Doplňte prosím jméno, platný e-mail a souhlas." },
+      {
+        message: isRentgen
+          ? "Doplňte prosím platný e-mail a souhlas."
+          : "Doplňte prosím jméno, platný e-mail a souhlas.",
+      },
       { status: 400 }
     );
   }
@@ -77,18 +85,31 @@ export async function POST(request) {
   const toEmail = process.env.CONTACT_TO_EMAIL || DEFAULT_TO_EMAIL;
   const fromEmail = process.env.CONTACT_FROM_EMAIL || DEFAULT_FROM_EMAIL;
 
-  const subjectName = name.replace(/[\r\n]+/g, " ");
-  const subject = `Nový dotaz z webu - ${subjectName}`;
+  const displayName = name || "Neuvedeno";
+  const subjectName = displayName.replace(/[\r\n]+/g, " ");
+  const subject = isRentgen
+    ? `Finanční rentgen - ${subjectName}`
+    : `Nový dotaz z webu - ${subjectName}`;
   const html = `
     <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #111827;">
-      <h1 style="font-size: 20px; margin: 0 0 16px;">Nový dotaz z webu</h1>
-      <p><strong>Jméno:</strong> ${paragraph(name)}</p>
+      <h1 style="font-size: 20px; margin: 0 0 16px;">${isRentgen ? "Nový výsledek finančního rentgenu" : "Nový dotaz z webu"}</h1>
+      <p><strong>Jméno:</strong> ${paragraph(displayName)}</p>
       <p><strong>E-mail:</strong> ${paragraph(email)}</p>
       <p><strong>Telefon:</strong> ${paragraph(phone)}</p>
+      ${isRentgen ? `<p><strong>Téma:</strong> ${paragraph(topic)}</p>` : ""}
       <p><strong>Zpráva:</strong><br />${paragraph(message)}</p>
+      ${
+        isRentgen
+          ? `<p><strong>Podklad z rentgenu:</strong><br />${paragraph(advisorContext)}</p>`
+          : ""
+      }
       <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 24px 0;" />
       <p style="font-size: 13px; color: #6b7280;">
-        Zpráva byla odeslána z kontaktního formuláře na webu Daniela Koláře.
+        ${
+          isRentgen
+            ? "Zpráva byla odeslána z formuláře ve finančním rentgenu na webu Daniela Koláře."
+            : "Zpráva byla odeslána z kontaktního formuláře na webu Daniela Koláře."
+        }
       </p>
     </div>
   `;

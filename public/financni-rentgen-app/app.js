@@ -249,6 +249,16 @@ const state = {
   contactOpen: false,
   insightOpen: false,
   feedback: null,
+  contactStatus: "idle",
+  contactError: "",
+  contactDraft: {
+    name: "",
+    email: "",
+    phone: "",
+    topic: "",
+    message: "",
+    consent: false,
+  },
   renderedViewKey: "",
 };
 
@@ -466,6 +476,15 @@ function renderResult() {
   const scoreColor = result.total < 50 ? "#de8737" : result.total < 70 ? "#d49a32" : "#1a9b7a";
   const cta = resultCta(result.weakest);
   const priorityCopy = priorityResultCopy(result.weakest);
+  const contact = {
+    name: state.contactDraft.name || "",
+    email: state.contactDraft.email || "",
+    phone: state.contactDraft.phone || "",
+    topic: state.contactDraft.topic || weak.label,
+    message: state.contactDraft.message || summaryText(result),
+    consent: state.contactDraft.consent,
+  };
+  const isSending = state.contactStatus === "sending";
 
   app.innerHTML = `
     <div class="screen result-screen">
@@ -561,45 +580,64 @@ function renderResult() {
 
       <div class="contact-card ${state.contactOpen ? "" : "hidden"}">
         <h3>Kontakt pro navázání</h3>
-        <p>Kontakt zadáváte dobrovolně. Stačí e-mail. Telefon doplňte jen tehdy, pokud vám vyhovuje rychlejší domluva.</p>
-        <form class="form-grid">
-          <div class="field">
-            <label for="name">Jméno</label>
-            <input id="name" name="name" autocomplete="name" />
-          </div>
-          <div class="field">
-            <label for="email">E-mail</label>
-            <input id="email" name="email" type="email" autocomplete="email" />
-          </div>
-          <div class="field">
-            <label for="phone">Telefon, pokud chcete zavolat</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" />
-          </div>
-          <div class="field">
-            <label for="topic">Téma</label>
-            <input id="topic" name="topic" value="${weak.label}" />
-          </div>
-          <div class="field full">
-            <div class="send-notice">
-              <strong>Co se Danielovi předá</strong>
-              <p>Daniel uvidí krátkou zprávu níže a k ní automaticky přiložený stručný přehled odpovědí z rentgenu. Díky tomu se může podívat na souvislosti, ne jen na výsledné skóre.</p>
-            </div>
-          </div>
-          <div class="field full">
-            <label for="message">Krátká zpráva - můžete doplnit vlastní poznámku</label>
-            <textarea id="message" name="message">${summaryText(result)}</textarea>
-          </div>
-          <div class="field full">
-            <details class="answer-preview">
-              <summary>Zobrazit přehled odpovědí, který se přiloží</summary>
-              <pre>${advisorPayload(result)}</pre>
-            </details>
-            <textarea class="visually-hidden" id="advisor-context" name="advisorContext" readonly>${advisorPayload(result)}</textarea>
-          </div>
-          <div class="field full">
-            <button class="btn primary full" type="button" data-action="copy-contact">Zkopírovat zprávu včetně podkladu</button>
-          </div>
-        </form>
+        ${
+          state.contactStatus === "sent"
+            ? `<div class="success-message">
+                <strong>Děkuji, výsledek je odeslaný.</strong>
+                <p>Daniel se na něj podívá a ozve se vám co nejdřív.</p>
+              </div>`
+            : `<p>Stačí e-mail a souhlas se zpracováním údajů. Telefon doplňte jen tehdy, pokud vám vyhovuje rychlejší domluva.</p>
+              <form class="form-grid">
+                <input type="text" id="website" name="website" autocomplete="off" tabindex="-1" class="visually-hidden" />
+                <div class="field">
+                  <label for="name">Jméno, pokud chcete</label>
+                  <input id="name" name="name" autocomplete="name" value="${escapeHtml(contact.name)}" />
+                </div>
+                <div class="field">
+                  <label for="email">E-mail *</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required value="${escapeHtml(contact.email)}" />
+                </div>
+                <div class="field">
+                  <label for="phone">Telefon, pokud chcete zavolat</label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" value="${escapeHtml(contact.phone)}" />
+                </div>
+                <div class="field">
+                  <label for="topic">Téma</label>
+                  <input id="topic" name="topic" value="${escapeHtml(contact.topic)}" />
+                </div>
+                <div class="field full">
+                  <div class="send-notice">
+                    <strong>Co se Danielovi předá</strong>
+                    <p>Daniel uvidí krátkou zprávu níže a k ní automaticky přiložený stručný přehled odpovědí z rentgenu. Díky tomu se může podívat na souvislosti, ne jen na výsledné skóre.</p>
+                  </div>
+                </div>
+                <div class="field full">
+                  <label for="message">Krátká zpráva - můžete doplnit vlastní poznámku</label>
+                  <textarea id="message" name="message">${escapeHtml(contact.message)}</textarea>
+                </div>
+                <div class="field full">
+                  <details class="answer-preview">
+                    <summary>Zobrazit přehled odpovědí, který se přiloží</summary>
+                    <pre>${escapeHtml(advisorPayload(result))}</pre>
+                  </details>
+                  <textarea class="visually-hidden" id="advisor-context" name="advisorContext" readonly>${escapeHtml(advisorPayload(result))}</textarea>
+                </div>
+                <div class="field full consent-field">
+                  <input id="gdpr" name="gdpr" type="checkbox" ${contact.consent ? "checked" : ""} />
+                  <label for="gdpr">
+                    Beru na vědomí, že mé osobní údaje budou zpracovány za účelem vyřízení mého dotazu. Více informací najdete v <a href="/zpracovani-osobnich-udaju" target="_top">zásadách ochrany osobních údajů</a>.
+                  </label>
+                </div>
+                ${
+                  state.contactError
+                    ? `<p class="field full form-error">${escapeHtml(state.contactError)}</p>`
+                    : ""
+                }
+                <div class="field full">
+                  <button class="btn primary full" type="button" data-action="send-contact" ${isSending ? "disabled" : ""}>${isSending ? "Odesílám..." : "Odeslat výsledek Danielovi"}</button>
+                </div>
+              </form>`
+        }
       </div>
 
       <div class="disclaimer">
@@ -840,6 +878,93 @@ function contactCopyText(message, result = calculateResult()) {
   return [message.trim(), advisorPayload(result)].filter(Boolean).join("\n\n---\n\n");
 }
 
+function escapeHtml(value = "") {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function cleanInput(selector) {
+  return document.querySelector(selector)?.value?.trim() || "";
+}
+
+function readContactDraft(result = calculateResult()) {
+  return {
+    name: cleanInput("#name"),
+    email: cleanInput("#email"),
+    phone: cleanInput("#phone"),
+    topic: cleanInput("#topic") || pillars[result.weakest].label,
+    message: cleanInput("#message") || summaryText(result),
+    consent: Boolean(document.querySelector("#gdpr")?.checked),
+    website: cleanInput("#website"),
+  };
+}
+
+function isValidEmail(value) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+async function sendContact() {
+  if (state.contactStatus === "sending") return;
+
+  const result = calculateResult();
+  const draft = readContactDraft(result);
+  state.contactDraft = draft;
+  state.contactError = "";
+
+  if (!draft.email || !isValidEmail(draft.email)) {
+    state.contactError = "Doplňte prosím platný e-mail.";
+    render();
+    return;
+  }
+
+  if (!draft.consent) {
+    state.contactError = "Potvrďte prosím souhlas se zpracováním údajů.";
+    render();
+    return;
+  }
+
+  state.contactStatus = "sending";
+  render();
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        source: "financni-rentgen",
+        name: draft.name,
+        phone: draft.phone,
+        email: draft.email,
+        topic: draft.topic,
+        message: draft.message,
+        advisorContext: advisorPayload(result),
+        consent: draft.consent,
+        website: draft.website,
+      }),
+    });
+
+    if (!response.ok) {
+      const data = await response.json().catch(() => null);
+      throw new Error(data?.message || "Výsledek se nepodařilo odeslat.");
+    }
+
+    state.contactStatus = "sent";
+    state.contactError = "";
+    render();
+  } catch (error) {
+    state.contactStatus = "idle";
+    state.contactError =
+      error.message || "Výsledek se nepodařilo odeslat. Zkuste to prosím znovu.";
+    render();
+  }
+}
+
 async function copyText(text) {
   try {
     await navigator.clipboard.writeText(text);
@@ -889,6 +1014,16 @@ function restart() {
   state.contactOpen = false;
   state.insightOpen = false;
   state.feedback = null;
+  state.contactStatus = "idle";
+  state.contactError = "";
+  state.contactDraft = {
+    name: "",
+    email: "",
+    phone: "",
+    topic: "",
+    message: "",
+    consent: false,
+  };
   render();
 }
 
@@ -901,6 +1036,8 @@ function jumpToDemoResult() {
   state.contactOpen = false;
   state.insightOpen = false;
   state.feedback = null;
+  state.contactStatus = "idle";
+  state.contactError = "";
   render();
 }
 
@@ -917,6 +1054,7 @@ app.addEventListener("click", (event) => {
   if (action === "continue-feedback") advanceFromQuestion();
   if (action === "open-contact") {
     state.contactOpen = true;
+    state.contactError = "";
     render();
     window.setTimeout(() => document.querySelector(".contact-card")?.scrollIntoView({ behavior: "smooth" }), 80);
   }
@@ -935,6 +1073,7 @@ app.addEventListener("click", (event) => {
       showToast(copied ? "Zpráva zkopírována" : "Zpráva je připravená v poli");
     });
   }
+  if (action === "send-contact") sendContact();
   if (action === "restart") restart();
 
   if (target.dataset.situation !== undefined) {

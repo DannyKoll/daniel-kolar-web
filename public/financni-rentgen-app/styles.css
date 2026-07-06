@@ -946,6 +946,33 @@ h3 {
   grid-column: 1 / -1;
 }
 
+.consent-field {
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.consent-field input {
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  accent-color: var(--gold);
+}
+
+.consent-field label {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.consent-field a {
+  color: var(--gold-light);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
 .field label {
   color: var(--navy);
   font-size: 0.86rem;
@@ -1024,6 +1051,33 @@ h3 {
 .micro-note {
   margin-top: -4px;
   font-size: 0.88rem;
+}
+
+.form-error,
+.success-message {
+  border: 1px solid rgba(222, 135, 55, 0.28);
+  border-radius: 14px;
+  padding: 13px 14px;
+  background: rgba(222, 135, 55, 0.1);
+  color: #8a4a16 !important;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.success-message {
+  border-color: rgba(55, 184, 148, 0.24);
+  background: rgba(55, 184, 148, 0.1);
+  color: #12644f !important;
+}
+
+.success-message strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #0f3f35;
+}
+
+.success-message p {
+  margin: 0;
 }
 
 .insight-card p {
