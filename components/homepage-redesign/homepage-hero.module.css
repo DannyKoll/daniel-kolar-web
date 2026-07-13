@@ -594,20 +594,22 @@
 }
 
 @media (max-width: 767px) {
-  .hero.introReset .system,
-  .hero.introReset .links path,
-  .hero.introReset .pulseRoutes path,
-  .hero.introReset .portraitStage,
-  .hero.introReset .portrait,
-  .hero.introReset .node,
-  .hero.introReset .coreDot::before,
-  .hero.introReset .coreDot::after,
-  .hero.introReset .dot::after,
-  .hero.introReset .header,
-  .hero.introReset .signature,
-  .hero.introReset .eyebrow,
-  .hero.introReset .claim span,
-  .hero.introReset .offer {
+  .claim span {
+    opacity: 0;
+  }
+
+  .hero:not(.introReady) .system,
+  .hero:not(.introReady) .links path,
+  .hero:not(.introReady) .pulseRoutes path,
+  .hero:not(.introReady) .node,
+  .hero:not(.introReady) .coreDot::before,
+  .hero:not(.introReady) .coreDot::after,
+  .hero:not(.introReady) .dot::after,
+  .hero:not(.introReady) .header,
+  .hero:not(.introReady) .signature,
+  .hero:not(.introReady) .eyebrow,
+  .hero:not(.introReady) .claim span,
+  .hero:not(.introReady) .offer {
     animation: none !important;
   }
 
@@ -631,11 +633,20 @@
       linear-gradient(180deg, transparent 0%, #000 9%, #000 82%, transparent 100%),
       radial-gradient(ellipse 82% 78% at 72% 42%, #000 0%, #000 56%, transparent 100%);
     mask-composite: intersect;
-    animation: portraitIn 1.38s 2.18s cubic-bezier(.16,1,.3,1) forwards;
+    animation: none;
   }
 
   .portrait {
     object-position: 50% 17%;
+    animation: none;
+  }
+
+  .hero.portraitReady .portraitStage {
+    animation: portraitIn 1.38s cubic-bezier(.16,1,.3,1) forwards;
+  }
+
+  .hero.portraitReady .portrait {
+    animation: portraitMove 5.2s cubic-bezier(.16,1,.3,1) both;
   }
 
   .portraitTone {

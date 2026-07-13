@@ -13,7 +13,11 @@ const lifeGoals = [
 
 export default function HomepageHero({ showHeader = true }) {
   return (
-      <MobileHeroIntro className={styles.hero} resetClassName={styles.introReset}>
+      <MobileHeroIntro
+        className={styles.hero}
+        introReadyClassName={styles.introReady}
+        portraitReadyClassName={styles.portraitReady}
+      >
         <div className={styles.ambient} aria-hidden="true">
           <span className={styles.auroraOne} />
           <span className={styles.auroraTwo} />
