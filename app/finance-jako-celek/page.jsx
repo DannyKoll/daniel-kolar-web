@@ -7,10 +7,11 @@ import {
   PiggyBank,
   ShieldCheck,
 } from "lucide-react";
-import Navbar from "@/components/Navbar";
-import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import ContactLab from "@/components/homepage-redesign/ContactLab";
+import HomepageFooter from "@/components/homepage-redesign/HomepageFooter";
+import HomepageNav from "@/components/homepage-redesign/HomepageNav";
+import styles from "@/components/homepage-redesign/homepage-lab.module.css";
 
 export const metadata = {
   title: "Finance jako celek | Daniel Kolář",
@@ -64,9 +65,9 @@ const outcomes = [
 
 export default function FinanceAsWholePage() {
   return (
-    <main className="relative overflow-hidden bg-navy-950">
+    <main className={styles.page + " bg-navy-950"}>
       <ScrollReveal />
-      <Navbar />
+      <HomepageNav homeHref="/" currentPage="finance" immediate />
 
       <section
         id="top"
@@ -122,25 +123,25 @@ export default function FinanceAsWholePage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden pt-10 pb-14 sm:pt-12 sm:pb-16 lg:pt-12 lg:pb-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-950 via-navy-900/95 to-navy-950" />
-        <div className="absolute right-0 top-1/4 h-[460px] w-[460px] rounded-full bg-gold-500/[0.04] blur-3xl" />
+      <section id="rozdil" className="relative overflow-hidden bg-[#f6f1e8] py-16 text-[#07131f] sm:py-20 lg:py-24">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_88%_10%,rgba(185,142,59,0.12),transparent_30%),linear-gradient(145deg,#f8f4ec_0%,#eee6d9_100%)]" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#9a7330]/25 to-transparent" />
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
           <div className="reveal max-w-3xl">
             <div className="mb-5 inline-flex items-center gap-2">
-              <span className="h-px w-10 bg-gold-500" />
-              <span className="text-xs uppercase tracking-[0.25em] text-gold-400 sm:text-sm">
+              <span className="h-px w-10 bg-[#9a7330]/70" />
+              <span className="text-xs uppercase tracking-[0.25em] text-[#86672d] sm:text-sm">
                 Rozdíl v přístupu
               </span>
             </div>
-            <h2 className="font-display text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
+            <h2 className="font-display text-3xl leading-tight text-[#07131f] sm:text-4xl lg:text-5xl">
               Jednotlivé produkty nejsou cíl. Jsou to{" "}
-              <span className="gold-text">součásti plánu</span>.
+              <span className="text-[#a17931]">součásti plánu</span>.
             </h2>
           </div>
 
-          <div className="mt-12 overflow-hidden rounded-[1.5rem] border border-gold-500/14 bg-navy-950/54 backdrop-blur-sm">
+          <div className="mt-12 overflow-hidden border-y border-[#6d5425]/20 bg-white/20">
             <div className="grid lg:grid-cols-2">
               <ComparisonColumn
                 eyebrow="Když stojí zvlášť"
@@ -185,11 +186,10 @@ export default function FinanceAsWholePage() {
             <div className="lg:col-span-8">
               <div className="relative space-y-7 lg:space-y-9">
                 <div className="absolute bottom-6 left-5 top-6 hidden w-px bg-gradient-to-b from-gold-500/10 via-gold-500/35 to-gold-500/10 sm:block" />
-                {outcomes.map((outcome, index) => (
+                {outcomes.map((outcome) => (
                   <OutcomeRow
                     key={outcome.title}
                     outcome={outcome}
-                    index={index}
                   />
                 ))}
               </div>
@@ -223,8 +223,8 @@ export default function FinanceAsWholePage() {
         </div>
       </section>
 
-      <CTA />
-      <Footer />
+      <ContactLab />
+      <HomepageFooter homeHref="/" />
     </main>
   );
 }
@@ -232,8 +232,8 @@ export default function FinanceAsWholePage() {
 function VideoFrame() {
   return (
     <div className="relative mx-auto">
-      <div className="absolute -inset-3 rotate-[-1.2deg] rounded-[2rem] border border-gold-500/24" />
-      <div className="relative aspect-video overflow-hidden rounded-[1.6rem] border border-gold-500/24 bg-navy-950/80 shadow-card backdrop-blur-md">
+      <div className="absolute -inset-px rounded-[1.8rem] bg-gradient-to-br from-gold-300/35 via-white/10 to-gold-700/20 blur-[0.5px]" />
+      <div className="relative aspect-video overflow-hidden rounded-[1.75rem] border border-white/10 bg-navy-950 shadow-[0_30px_90px_-42px_rgba(0,0,0,0.95),0_18px_55px_-38px_rgba(201,169,97,0.6)]">
         <iframe
           src="https://player.vimeo.com/video/1204824172?badge=0&autopause=0&player_id=0&app_id=58479"
           title="Finance jako celek"
@@ -252,13 +252,13 @@ function ComparisonColumn({ eyebrow, items, muted = false }) {
     <div
       className={`p-6 sm:p-8 ${
         muted
-          ? "border-b border-gold-500/10 lg:border-b-0 lg:border-r"
-          : "bg-gold-500/[0.045]"
+          ? "border-b border-[#173042]/12 lg:border-b-0 lg:border-r"
+          : "bg-[linear-gradient(135deg,rgba(255,255,255,0.48),rgba(198,164,90,0.08))]"
       }`}
     >
       <p
         className={`text-xs uppercase tracking-[0.25em] ${
-          muted ? "text-slate-400" : "text-gold-300"
+          muted ? "text-[#58636a]" : "text-[#86672d]"
         }`}
       >
         {eyebrow}
@@ -268,12 +268,12 @@ function ComparisonColumn({ eyebrow, items, muted = false }) {
           <div key={item} className="flex gap-3">
             <span
               className={`mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full ${
-                muted ? "bg-slate-500" : "bg-gold-400"
+                muted ? "bg-[#7b878d]" : "bg-[#b88a37]"
               }`}
             />
             <p
               className={`text-sm leading-relaxed sm:text-base ${
-                muted ? "text-slate-400" : "text-slate-100"
+                muted ? "text-[#5c6870]" : "text-[#172b38]"
               }`}
             >
               {item}
@@ -285,7 +285,7 @@ function ComparisonColumn({ eyebrow, items, muted = false }) {
   );
 }
 
-function OutcomeRow({ outcome, index }) {
+function OutcomeRow({ outcome }) {
   const Icon = outcome.icon;
 
   return (
@@ -294,10 +294,7 @@ function OutcomeRow({ outcome, index }) {
         <Icon size={20} />
       </div>
       <div className="min-w-0 border-b border-white/10 pb-7">
-        <div className="mb-2 flex flex-wrap items-center gap-3">
-          <span className="font-display text-xl text-gold-300">
-            {String(index + 1).padStart(2, "0")}
-          </span>
+        <div className="mb-2 flex flex-wrap items-center">
           <span className="text-xs uppercase tracking-[0.24em] text-slate-500">
             {outcome.eyebrow}
           </span>
