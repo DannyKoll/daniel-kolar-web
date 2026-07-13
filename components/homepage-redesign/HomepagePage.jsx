@@ -37,7 +37,7 @@ export default function HomepagePage() {
           <div className={`${styles.bridgeIntro} reveal`}>
             <div className={styles.eyebrow}>
               <span />
-              Finance v souvislostech
+              Aby to celé dávalo smysl
               <span />
             </div>
 
