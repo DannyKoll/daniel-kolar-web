@@ -76,16 +76,6 @@
   transform: translateX(-50%);
 }
 
-.bridgeGlow {
-  position: absolute;
-  top: 24%;
-  left: 50%;
-  width: min(74vw, 980px);
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(177, 137, 59, .28), transparent);
-  transform: translateX(-50%);
-}
-
 .bridgeInner {
   position: relative;
   display: flex;

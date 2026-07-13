@@ -32,7 +32,6 @@ export default function HomepagePage() {
 
         <section className={styles.bridge} aria-labelledby="bridge-title">
         <span className={styles.panelEdge} aria-hidden="true" />
-        <div className={styles.bridgeGlow} aria-hidden="true" />
 
         <div className={styles.bridgeInner}>
           <div className={`${styles.bridgeIntro} reveal`}>
