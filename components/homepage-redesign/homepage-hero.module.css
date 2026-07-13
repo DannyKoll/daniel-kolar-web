@@ -705,8 +705,8 @@
     bottom: auto;
     width: 78%;
     height: 58svh;
-    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 9%, #000 82%, transparent 100%);
-    mask-image: linear-gradient(180deg, transparent 0%, #000 9%, #000 82%, transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .15) 20%, #000 48%, #000 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .15) 20%, #000 48%, #000 100%);
     animation: none;
   }
 
