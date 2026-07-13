@@ -46,6 +46,14 @@ body::before {
   transform: translateY(0);
 }
 
+@media (max-width: 767px) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* Gold gradient text */
 .gold-text {
   background: linear-gradient(135deg, #e2c97f 0%, #c9a961 50%, #b08c3a 100%);

@@ -27,6 +27,7 @@ const homepageHeroBoot = String.raw`
     var startedAt = 0;
     var imageSettled = false;
     var portraitQueued = false;
+    var storyQueued = false;
     var startTimer = 0;
     var portraitTimer = 0;
     var storyTimer = 0;
@@ -40,15 +41,24 @@ const homepageHeroBoot = String.raw`
 
       portraitQueued = true;
       var elapsed = now() - startedAt;
-      var remaining = Math.max(0, 1200 - elapsed);
+      var remaining = Math.max(0, 560 - elapsed);
 
       portraitTimer = window.setTimeout(() => {
         if (!hero.isConnected) return;
 
         hero.setAttribute("data-portrait-ready", "true");
-        storyTimer = window.setTimeout(() => {
-          if (hero.isConnected) hero.setAttribute("data-story-ready", "true");
-        }, 480);
+      }, remaining);
+    }
+
+    function queueStory() {
+      if (!startedAt || storyQueued || !hero.isConnected) return;
+
+      storyQueued = true;
+      var elapsed = now() - startedAt;
+      var remaining = Math.max(0, 720 - elapsed);
+
+      storyTimer = window.setTimeout(() => {
+        if (hero.isConnected) hero.setAttribute("data-story-ready", "true");
       }, remaining);
     }
 
@@ -113,6 +123,7 @@ const homepageHeroBoot = String.raw`
 
           startedAt = now();
           hero.setAttribute("data-intro-ready", "true");
+          queueStory();
           queuePortrait();
         });
       });
@@ -132,19 +143,19 @@ const homepageHeroBoot = String.raw`
       return;
     }
 
-    scheduleStart(180);
+    scheduleStart(80);
 
     function handleVisibilityChange() {
       if (document.visibilityState !== "visible") return;
       document.removeEventListener("visibilitychange", handleVisibilityChange);
-      scheduleStart(80);
+      scheduleStart(40);
     }
 
     if (document.visibilityState === "hidden") {
       document.addEventListener("visibilitychange", handleVisibilityChange);
     }
 
-    window.addEventListener("pageshow", () => scheduleStart(80), { once: true });
+    window.addEventListener("pageshow", () => scheduleStart(40), { once: true });
   }
 
   function scan(root) {

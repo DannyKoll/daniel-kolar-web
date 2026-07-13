@@ -604,6 +604,19 @@
     opacity: 0;
   }
 
+  .linkOne { --line-delay: .08s; }
+  .linkTwo { --line-delay: .16s; }
+  .linkThree { --line-delay: .24s; }
+  .linkFour { --line-delay: .32s; }
+  .linkFive { --line-delay: .4s; }
+
+  .core { --node-delay: .1s; }
+  .goalHome { --node-delay: .18s; }
+  .goalCalm { --node-delay: .26s; }
+  .goalSafety { --node-delay: .34s; }
+  .goalWealth { --node-delay: .42s; }
+  .goalFreedom { --node-delay: .5s; }
+
   .hero:not([data-intro-ready="true"]) .system,
   .hero:not([data-intro-ready="true"]) .links path,
   .hero:not([data-intro-ready="true"]) .pulseRoutes path,
@@ -621,7 +634,7 @@
   .system {
     z-index: 2;
     transform-origin: 36.88% 30%;
-    animation: mobileSystemSettle .78s 2.08s cubic-bezier(.16,1,.3,1) forwards;
+    animation: mobileSystemSettle .78s 1.35s cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .portraitStage {
@@ -647,7 +660,7 @@
   }
 
   .hero[data-portrait-ready="true"] .portraitStage {
-    animation: portraitIn 1.38s cubic-bezier(.16,1,.3,1) forwards;
+    animation: portraitIn 1.12s cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .hero[data-portrait-ready="true"] .portrait {
@@ -655,7 +668,7 @@
   }
 
   .hero[data-story-ready="true"] .signature {
-    animation: signatureIn .72s .64s cubic-bezier(.16,1,.3,1) forwards;
+    animation: signatureIn .62s .42s cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .hero[data-story-ready="true"] .eyebrow {
@@ -663,19 +676,19 @@
   }
 
   .hero[data-story-ready="true"] .claimOne {
-    animation: claimIn .68s .14s cubic-bezier(.16,1,.3,1) forwards;
+    animation: claimIn .58s .08s cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .hero[data-story-ready="true"] .claimTwo {
-    animation: claimIn .72s .28s cubic-bezier(.16,1,.3,1) forwards;
+    animation: claimIn .62s .18s cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .hero[data-story-ready="true"] .claimThree {
-    animation: claimIn .72s .42s cubic-bezier(.16,1,.3,1) forwards;
+    animation: claimIn .62s .28s cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .hero[data-story-ready="true"] .offer {
-    animation: storyIn .7s .8s cubic-bezier(.16,1,.3,1) forwards;
+    animation: storyIn .62s .55s cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .portraitTone {

@@ -1867,9 +1867,21 @@
     margin-left: -6px;
   }
 
+  .financePaths path {
+    stroke-dashoffset: 0;
+  }
+
+  .financeOrbitOuter,
+  .financeOrbitInner {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
   .financeCore {
     width: 116px;
     height: 116px;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
   }
 
   .financeCore span,
@@ -1885,6 +1897,8 @@
     padding: 6px 0;
     gap: 6px;
     font-size: .86rem;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .financeHome { top: 12%; left: 1%; }
@@ -1900,6 +1914,8 @@
 
   .financeInterludeCopy {
     padding: 30px 2px 0;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .financeInterludeCopy::before {
