@@ -47,6 +47,10 @@ body::before {
 }
 
 @media (max-width: 767px) {
+  body::before {
+    display: none;
+  }
+
   .reveal {
     opacity: 1;
     transform: none;

@@ -41,7 +41,7 @@ const homepageHeroBoot = String.raw`
 
       portraitQueued = true;
       var elapsed = now() - startedAt;
-      var remaining = Math.max(0, 560 - elapsed);
+      var remaining = Math.max(0, 420 - elapsed);
 
       portraitTimer = window.setTimeout(() => {
         if (!hero.isConnected) return;
@@ -55,7 +55,7 @@ const homepageHeroBoot = String.raw`
 
       storyQueued = true;
       var elapsed = now() - startedAt;
-      var remaining = Math.max(0, 720 - elapsed);
+      var remaining = Math.max(0, 180 - elapsed);
 
       storyTimer = window.setTimeout(() => {
         if (hero.isConnected) hero.setAttribute("data-story-ready", "true");
@@ -116,6 +116,7 @@ const homepageHeroBoot = String.raw`
 
       if (document.visibilityState === "hidden") return;
       started = true;
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
 
       window.requestAnimationFrame(() => {
         window.requestAnimationFrame(() => {
@@ -143,19 +144,26 @@ const homepageHeroBoot = String.raw`
       return;
     }
 
-    scheduleStart(80);
+    scheduleStart(40);
 
     function handleVisibilityChange() {
-      if (document.visibilityState !== "visible") return;
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-      scheduleStart(40);
+      if (document.visibilityState !== "visible" || started) return;
+      scheduleStart(20);
     }
 
-    if (document.visibilityState === "hidden") {
-      document.addEventListener("visibilitychange", handleVisibilityChange);
+    function handlePageShow(event) {
+      if (!hero.isConnected) return;
+
+      if (event.persisted && started) {
+        showFinalState(hero);
+        return;
+      }
+
+      scheduleStart(20);
     }
 
-    window.addEventListener("pageshow", () => scheduleStart(40), { once: true });
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    window.addEventListener("pageshow", handlePageShow);
   }
 
   function scan(root) {

@@ -1867,6 +1867,14 @@
     margin-left: -6px;
   }
 
+  .financeDiagram::before {
+    filter: none;
+  }
+
+  .financePulseRoutes {
+    display: none;
+  }
+
   .financePaths path {
     stroke-dashoffset: 0;
   }
@@ -1910,6 +1918,10 @@
   .financeCorePlay {
     width: 34px;
     height: 34px;
+  }
+
+  .financeCorePlay::after {
+    display: none;
   }
 
   .financeInterludeCopy {

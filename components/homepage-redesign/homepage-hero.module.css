@@ -600,8 +600,58 @@
 }
 
 @media (max-width: 767px) {
+  .hero::after,
+  .ambient,
+  .pulseRoutes {
+    display: none;
+  }
+
   .claim span {
-    opacity: 0;
+    opacity: .16;
+    transform: translateY(6px);
+  }
+
+  .claimTwo {
+    filter: none;
+  }
+
+  .eyebrow {
+    opacity: .28;
+    transform: translateY(4px);
+  }
+
+  .offer {
+    opacity: .24;
+    transform: translateY(5px);
+  }
+
+  .signature {
+    opacity: .18;
+    transform: translateX(5px);
+  }
+
+  .links path {
+    opacity: .16;
+    stroke-dashoffset: .82;
+  }
+
+  .node {
+    opacity: .14;
+  }
+
+  .core {
+    opacity: .68;
+  }
+
+  .coreDot::before,
+  .coreDot::after {
+    animation: none;
+  }
+
+  .dot::after {
+    opacity: .2;
+    transform: scale(1);
+    animation: none;
   }
 
   .linkOne { --line-delay: .08s; }
@@ -637,20 +687,26 @@
     animation: mobileSystemSettle .78s 1.35s cubic-bezier(.16,1,.3,1) forwards;
   }
 
+  .hero[data-intro-ready="true"] .links path {
+    animation: mobileDrawLink .7s var(--line-delay) cubic-bezier(.16,1,.3,1) forwards;
+  }
+
+  .hero[data-intro-ready="true"] .node {
+    animation: mobileNodeIn .52s var(--node-delay) cubic-bezier(.16,1,.3,1) forwards;
+  }
+
+  .hero[data-intro-ready="true"] .core {
+    animation-name: mobileCoreIn;
+  }
+
   .portraitStage {
     top: 7%;
     right: -12%;
     bottom: auto;
     width: 78%;
     height: 58svh;
-    -webkit-mask-image:
-      linear-gradient(180deg, transparent 0%, #000 9%, #000 82%, transparent 100%),
-      radial-gradient(ellipse 82% 78% at 72% 42%, #000 0%, #000 56%, transparent 100%);
-    -webkit-mask-composite: source-in;
-    mask-image:
-      linear-gradient(180deg, transparent 0%, #000 9%, #000 82%, transparent 100%),
-      radial-gradient(ellipse 82% 78% at 72% 42%, #000 0%, #000 56%, transparent 100%);
-    mask-composite: intersect;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 9%, #000 82%, transparent 100%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 9%, #000 82%, transparent 100%);
     animation: none;
   }
 
@@ -660,11 +716,11 @@
   }
 
   .hero[data-portrait-ready="true"] .portraitStage {
-    animation: portraitIn 1.12s cubic-bezier(.16,1,.3,1) forwards;
+    animation: mobilePortraitIn .9s cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .hero[data-portrait-ready="true"] .portrait {
-    animation: portraitMove 5.2s cubic-bezier(.16,1,.3,1) both;
+    animation: mobilePortraitMove 2.2s cubic-bezier(.16,1,.3,1) both;
   }
 
   .hero[data-story-ready="true"] .signature {
@@ -808,6 +864,31 @@
     opacity: .82;
     transform: translate3d(-9%, -5.5%, 0) scale(.78);
   }
+}
+
+@keyframes mobileDrawLink {
+  from { opacity: .16; stroke-dashoffset: .82; }
+  to { opacity: .82; stroke-dashoffset: 0; }
+}
+
+@keyframes mobileNodeIn {
+  from { opacity: .14; }
+  to { opacity: 1; }
+}
+
+@keyframes mobileCoreIn {
+  from { opacity: .68; }
+  to { opacity: 1; }
+}
+
+@keyframes mobilePortraitIn {
+  from { opacity: 0; transform: translateX(3%) scale(1.01); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+@keyframes mobilePortraitMove {
+  from { transform: scale(1.075) translateY(.5%); }
+  to { transform: scale(1.045) translateY(0); }
 }
 
 @media (max-height: 730px) and (max-width: 767px) {
