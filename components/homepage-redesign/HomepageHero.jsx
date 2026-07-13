@@ -80,7 +80,7 @@ export default function HomepageHero({ showHeader = true }) {
 
         <div className={styles.portraitStage} aria-hidden="true">
           <Image
-            src="/foto-web-homepage.jpg"
+            src="/Foto-web-homepage.jpg"
             alt=""
             fill
             priority
