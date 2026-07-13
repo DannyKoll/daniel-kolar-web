@@ -111,13 +111,6 @@ export default function HomepageHero({ showHeader = true }) {
           </a>
         </header>}
 
-        <div className={styles.signature} aria-hidden="true">
-          <span />
-          <div>
-            <strong>Váš průvodce financemi</strong>
-          </div>
-        </div>
-
         <div className={styles.story}>
           <div className={styles.eyebrow}>
             <span />
