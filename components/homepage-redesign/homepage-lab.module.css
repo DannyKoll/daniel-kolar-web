@@ -1866,20 +1866,21 @@
   }
 
   .financePaths path {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: .72;
+    transition-duration: .9s;
   }
 
   .financeOrbitOuter,
   .financeOrbitInner {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    opacity: .22;
+    transform: translate(-50%, -50%) scale(.93);
   }
 
   .financeCore {
     width: 116px;
     height: 116px;
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    opacity: .62;
+    transform: translate(-50%, -50%) scale(.9);
   }
 
   .financeCore span,
@@ -1895,8 +1896,8 @@
     padding: 6px 0;
     gap: 6px;
     font-size: .86rem;
-    opacity: 1;
-    transform: translateY(0);
+    opacity: .4;
+    transform: translateY(6px);
   }
 
   .financeHome { top: 12%; left: 1%; }
