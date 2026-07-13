@@ -464,9 +464,10 @@
 
 .claimTwo {
   margin: .08em auto 0;
+  padding: .06em .12em .12em;
   font-size: clamp(4.2rem, 6.6vw, 7.8rem);
   font-style: italic;
-  line-height: .77;
+  line-height: .96;
   background: linear-gradient(108deg, #f3e0aa, #d1b267 48%, #a67c35);
   background-clip: text;
   -webkit-background-clip: text;
@@ -508,17 +509,22 @@
   flex: 0 0 auto;
   align-items: center;
   justify-content: center;
-  gap: 11px;
-  min-height: 50px;
-  padding: 0 23px;
+  gap: 9px;
+  min-height: 46px;
+  padding: 0 20px;
   border-radius: 999px;
   color: #07121e;
   background: linear-gradient(135deg, #f2dfa7, #d4b66a 52%, #ad8237);
   box-shadow: 0 16px 45px -18px rgba(222, 188, 99, .8), inset 0 1px 0 rgba(255,255,255,.45);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 750;
   text-decoration: none;
   transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.primaryCta svg {
+  width: 16px;
+  height: 16px;
 }
 
 .primaryCta:hover {
