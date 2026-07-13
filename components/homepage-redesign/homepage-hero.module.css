@@ -362,40 +362,6 @@
   white-space: nowrap;
 }
 
-.signature {
-  position: absolute;
-  z-index: 8;
-  right: 6.2%;
-  top: 46%;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  opacity: 0;
-  transform: translateX(18px);
-  animation: signatureIn .72s 2.82s cubic-bezier(.16,1,.3,1) forwards;
-}
-
-.signature > span {
-  width: 48px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(219, 190, 116, .55));
-}
-
-.signature div {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.signature strong {
-  color: rgba(238, 229, 205, .76);
-  font-family: var(--font-sans), system-ui, sans-serif;
-  font-size: 8.5px;
-  font-weight: 700;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-}
-
 .story {
   position: absolute;
   z-index: 12;
@@ -580,10 +546,6 @@
   to { transform: scale(1.045) translateY(0); filter: brightness(.84) saturate(.78) contrast(1.05); }
 }
 
-@keyframes signatureIn {
-  to { opacity: 1; transform: translateX(0); }
-}
-
 @keyframes storyIn {
   to { opacity: 1; transform: translateY(0); }
 }
@@ -596,7 +558,6 @@
   .portraitStage { width: min(62vw, 760px); right: -14%; }
   .goalText strong { font-size: 13px; }
   .goalText small { display: none; }
-  .signature { right: 3.5%; }
 }
 
 @media (max-width: 767px) {
@@ -623,11 +584,6 @@
   .offer {
     opacity: .24;
     transform: translateY(5px);
-  }
-
-  .signature {
-    opacity: 0;
-    transform: translateX(5px);
   }
 
   .links path {
@@ -674,7 +630,6 @@
   .hero:not([data-intro-ready="true"]) .coreDot::before,
   .hero:not([data-intro-ready="true"]) .coreDot::after,
   .hero:not([data-intro-ready="true"]) .dot::after,
-  .hero:not([data-story-ready="true"]) .signature,
   .hero:not([data-story-ready="true"]) .eyebrow,
   .hero:not([data-story-ready="true"]) .claim span,
   .hero:not([data-story-ready="true"]) .offer {
@@ -721,10 +676,6 @@
 
   .hero[data-portrait-ready="true"] .portrait {
     animation: mobilePortraitMove 2.8s cubic-bezier(.16,1,.3,1) both;
-  }
-
-  .hero[data-story-ready="true"] .signature {
-    animation: signatureIn .72s 1.65s cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .hero[data-story-ready="true"] .eyebrow {
@@ -806,19 +757,6 @@
   .goalSafety { left: 20%; top: 50%; }
   .goalWealth { left: 51.5%; top: 18.33%; }
   .goalFreedom { left: 57.5%; top: 36.67%; }
-
-  .signature {
-    right: 4%;
-    top: 43%;
-    animation-delay: 2.86s;
-  }
-
-  .signature > span { width: 23px; }
-  .signature strong {
-    max-width: 92px;
-    font-size: 7.5px;
-    line-height: 1.35;
-  }
 
   .story {
     padding: 0 20px max(22px, env(safe-area-inset-bottom));
