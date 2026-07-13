@@ -12,7 +12,14 @@ const lifeGoals = [
 
 export default function HomepageHero({ showHeader = true }) {
   return (
-      <section className={styles.hero}>
+      <section
+        className={styles.hero}
+        data-homepage-hero
+        data-intro-ready="false"
+        data-portrait-ready="false"
+        data-story-ready="false"
+        suppressHydrationWarning
+      >
         <div className={styles.ambient} aria-hidden="true">
           <span className={styles.auroraOne} />
           <span className={styles.auroraTwo} />

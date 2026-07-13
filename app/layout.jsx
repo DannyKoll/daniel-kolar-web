@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter, Playfair_Display } from "next/font/google";
+import HomepageHeroBoot from "@/components/homepage-redesign/HomepageHeroBoot";
 
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
@@ -59,7 +60,10 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="cs" className={`${inter.variable} ${playfair.variable}`}>
-      <body>{children}</body>
+      <body>
+        <HomepageHeroBoot />
+        {children}
+      </body>
     </html>
   );
 }
