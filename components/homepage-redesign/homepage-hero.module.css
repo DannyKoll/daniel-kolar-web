@@ -594,6 +594,23 @@
 }
 
 @media (max-width: 767px) {
+  .hero.introReset .system,
+  .hero.introReset .links path,
+  .hero.introReset .pulseRoutes path,
+  .hero.introReset .portraitStage,
+  .hero.introReset .portrait,
+  .hero.introReset .node,
+  .hero.introReset .coreDot::before,
+  .hero.introReset .coreDot::after,
+  .hero.introReset .dot::after,
+  .hero.introReset .header,
+  .hero.introReset .signature,
+  .hero.introReset .eyebrow,
+  .hero.introReset .claim span,
+  .hero.introReset .offer {
+    animation: none !important;
+  }
+
   .system {
     z-index: 2;
     transform-origin: 36.88% 30%;

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import MobileHeroIntro from "./MobileHeroIntro";
 import styles from "./homepage-hero.module.css";
 
 const lifeGoals = [
@@ -12,7 +13,7 @@ const lifeGoals = [
 
 export default function HomepageHero({ showHeader = true }) {
   return (
-      <section className={styles.hero}>
+      <MobileHeroIntro className={styles.hero} resetClassName={styles.introReset}>
         <div className={styles.ambient} aria-hidden="true">
           <span className={styles.auroraOne} />
           <span className={styles.auroraTwo} />
@@ -135,6 +136,6 @@ export default function HomepageHero({ showHeader = true }) {
             </a>
           </div>
         </div>
-      </section>
+      </MobileHeroIntro>
   );
 }
