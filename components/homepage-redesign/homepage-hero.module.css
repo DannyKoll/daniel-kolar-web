@@ -654,18 +654,18 @@
     animation: none;
   }
 
-  .linkOne { --line-delay: .08s; }
-  .linkTwo { --line-delay: .16s; }
-  .linkThree { --line-delay: .24s; }
-  .linkFour { --line-delay: .32s; }
-  .linkFive { --line-delay: .4s; }
+  .linkOne { --line-delay: .14s; }
+  .linkTwo { --line-delay: .26s; }
+  .linkThree { --line-delay: .38s; }
+  .linkFour { --line-delay: .5s; }
+  .linkFive { --line-delay: .62s; }
 
-  .core { --node-delay: .1s; }
-  .goalHome { --node-delay: .18s; }
-  .goalCalm { --node-delay: .26s; }
-  .goalSafety { --node-delay: .34s; }
-  .goalWealth { --node-delay: .42s; }
-  .goalFreedom { --node-delay: .5s; }
+  .core { --node-delay: .16s; }
+  .goalHome { --node-delay: .28s; }
+  .goalCalm { --node-delay: .4s; }
+  .goalSafety { --node-delay: .52s; }
+  .goalWealth { --node-delay: .64s; }
+  .goalFreedom { --node-delay: .76s; }
 
   .hero:not([data-intro-ready="true"]) .system,
   .hero:not([data-intro-ready="true"]) .links path,
@@ -684,15 +684,15 @@
   .system {
     z-index: 2;
     transform-origin: 36.88% 30%;
-    animation: mobileSystemSettle .78s 1.35s cubic-bezier(.16,1,.3,1) forwards;
+    animation: mobileSystemSettle .9s 1.65s cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .hero[data-intro-ready="true"] .links path {
-    animation: mobileDrawLink .7s var(--line-delay) cubic-bezier(.16,1,.3,1) forwards;
+    animation: mobileDrawLink .82s var(--line-delay) cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .hero[data-intro-ready="true"] .node {
-    animation: mobileNodeIn .52s var(--node-delay) cubic-bezier(.16,1,.3,1) forwards;
+    animation: mobileNodeIn .64s var(--node-delay) cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .hero[data-intro-ready="true"] .core {
@@ -716,35 +716,35 @@
   }
 
   .hero[data-portrait-ready="true"] .portraitStage {
-    animation: mobilePortraitIn .9s cubic-bezier(.16,1,.3,1) forwards;
+    animation: mobilePortraitIn 1.25s cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .hero[data-portrait-ready="true"] .portrait {
-    animation: mobilePortraitMove 2.2s cubic-bezier(.16,1,.3,1) both;
+    animation: mobilePortraitMove 2.8s cubic-bezier(.16,1,.3,1) both;
   }
 
   .hero[data-story-ready="true"] .signature {
-    animation: signatureIn .62s .42s cubic-bezier(.16,1,.3,1) forwards;
+    animation: signatureIn .72s .62s cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .hero[data-story-ready="true"] .eyebrow {
-    animation: storyIn .58s cubic-bezier(.16,1,.3,1) forwards;
+    animation: storyIn .68s cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .hero[data-story-ready="true"] .claimOne {
-    animation: claimIn .58s .08s cubic-bezier(.16,1,.3,1) forwards;
+    animation: claimIn .72s .18s cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .hero[data-story-ready="true"] .claimTwo {
-    animation: claimIn .62s .18s cubic-bezier(.16,1,.3,1) forwards;
+    animation: claimIn .78s .38s cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .hero[data-story-ready="true"] .claimThree {
-    animation: claimIn .62s .28s cubic-bezier(.16,1,.3,1) forwards;
+    animation: claimIn .78s .58s cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .hero[data-story-ready="true"] .offer {
-    animation: storyIn .62s .55s cubic-bezier(.16,1,.3,1) forwards;
+    animation: storyIn .7s .88s cubic-bezier(.16,1,.3,1) forwards;
   }
 
   .portraitTone {

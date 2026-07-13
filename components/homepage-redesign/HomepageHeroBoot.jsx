@@ -41,7 +41,7 @@ const homepageHeroBoot = String.raw`
 
       portraitQueued = true;
       var elapsed = now() - startedAt;
-      var remaining = Math.max(0, 420 - elapsed);
+      var remaining = Math.max(0, 1550 - elapsed);
 
       portraitTimer = window.setTimeout(() => {
         if (!hero.isConnected) return;
@@ -55,7 +55,7 @@ const homepageHeroBoot = String.raw`
 
       storyQueued = true;
       var elapsed = now() - startedAt;
-      var remaining = Math.max(0, 180 - elapsed);
+      var remaining = Math.max(0, 760 - elapsed);
 
       storyTimer = window.setTimeout(() => {
         if (hero.isConnected) hero.setAttribute("data-story-ready", "true");
