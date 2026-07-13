@@ -85,8 +85,8 @@ export default function HomepageHero({ showHeader = true }) {
             alt=""
             fill
             priority
-            unoptimized
-            sizes="(max-width: 767px) 100vw, 58vw"
+            quality={90}
+            sizes="(max-width: 767px) 78vw, 58vw"
             className={styles.portrait}
           />
           <span className={styles.portraitTone} />
